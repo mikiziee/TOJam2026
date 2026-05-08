@@ -9,7 +9,9 @@ public class TestGrid : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        grid = new Grid(4,2, 10f);
+        grid = new Grid(4,2, 10f, new Vector3(20, 0));
+        grid = new Grid(2,5, 5f, new Vector3(0, -20));
+        grid = new Grid(2,25, 20f, new Vector3(0, -20));
     }
 
     // Update is called once per frame
