@@ -39,7 +39,7 @@ namespace CodeMonkey.Utils {
         private static Transform cachedCanvasTransform;
         public static Transform GetCanvasTransform() {
             if (cachedCanvasTransform == null) {
-                Canvas canvas = MonoBehaviour.FindObjectOfType<Canvas>();
+                Canvas canvas = MonoBehaviour.FindAnyObjectByType<Canvas>(); //changed
                 if (canvas != null) {
                     cachedCanvasTransform = canvas.transform;
                 }
@@ -230,6 +230,20 @@ namespace CodeMonkey.Utils {
 	    }
 
 
+        public static Vector3 GetMouseWorldPosition3D( LayerMask layerMask ) {
+            Vector3 vec;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if(Physics.Raycast(ray, out RaycastHit raycastHit, float.MaxValue, layerMask))
+            {
+                vec = raycastHit.point;
+            }
+            else
+            {
+                vec = Vector3.zero;
+            }
+            vec.z = 0f;
+            return vec;
+        }
 
         // Get Mouse Position in World with Z = 0f
         public static Vector3 GetMouseWorldPosition() {
