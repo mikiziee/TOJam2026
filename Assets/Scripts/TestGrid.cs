@@ -1,5 +1,6 @@
 using UnityEngine;
 using CodeMonkey.Utils;
+using UnityEngine.UIElements;
 
 public class TestGrid : MonoBehaviour
 {
@@ -9,9 +10,7 @@ public class TestGrid : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        grid = new Grid(4,2, 10f, new Vector3(20, 0));
-        grid = new Grid(2,5, 5f, new Vector3(0, -20));
-        grid = new Grid(2,25, 20f, new Vector3(0, -20));
+        grid = new Grid(20, 20, 10f, Vector3.zero );
     }
 
     // Update is called once per frame
@@ -19,11 +18,9 @@ public class TestGrid : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            grid.SetValue(UtilsClass.GetMouseWorldPosition3D(layerMask), 56);
-        }
-        if (Input.GetMouseButtonDown(1))
-        {
-            Debug.Log(grid.GetValue(UtilsClass.GetMouseWorldPosition3D(layerMask)));
+            Vector3 position = UtilsClass.GetMouseWorldPosition3D(layerMask);
+            int value = grid.GetValue(position);
+            grid.AddValue(position, 20, 1, 10);
         }
     }
 }
