@@ -38,7 +38,7 @@ namespace CodeMonkey.FreeWindow {
 
                 ShowWindow();
             } catch (Exception e) {
-                Debug.LogError(e);
+                //Debug.LogError(e);
             }
         }
 

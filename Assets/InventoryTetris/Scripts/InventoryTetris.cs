@@ -14,13 +14,17 @@ public class InventoryTetris : MonoBehaviour {
     private Grid<GridObject> grid;
     private RectTransform itemContainer;
 
+    [SerializeField] private int gridWidth = 10;
+    [SerializeField] private int gridHeight = 10;
+    [SerializeField] private float cellSize = 50f;
+
 
     private void Awake() {
         Instance = this;
 
-        int gridWidth = 10;
-        int gridHeight = 10;
-        float cellSize = 50f;
+        //int gridWidth = 10;
+        //int gridHeight = 10;
+        //float cellSize = 50f;
         grid = new Grid<GridObject>(gridWidth, gridHeight, cellSize, new Vector3(0, 0, 0), (Grid<GridObject> g, int x, int y) => new GridObject(g, x, y));
 
         itemContainer = transform.Find("ItemContainer").GetComponent<RectTransform>();
