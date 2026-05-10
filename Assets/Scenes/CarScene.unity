@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 151870537}
   - component: {fileID: 151870536}
   - component: {fileID: 151870539}
+  - component: {fileID: 151870540}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -181,7 +182,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 66.78
+  orthographic size: 49
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -205,13 +206,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 151870535}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 105, y: 48, z: -1}
+  m_LocalRotation: {x: 0.4848096, y: 0, z: 0, w: 0.8746197}
+  m_LocalPosition: {x: 40, y: 30, z: 25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 58, y: 0, z: 0}
 --- !u!114 &151870539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,6 +257,21 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &151870540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151870535}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e947e7eb3216d40b72c592fa6847a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CodeMonkey.MonoBehaviours.CameraFollowSetup
+  cameraFollow: {fileID: 0}
+  followTransform: {fileID: 1475869418}
+  zoom: 50
 --- !u!1 &551312498
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,13 +378,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 551312498}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 84.10273, y: 47.5, z: 87.3}
-  m_LocalScale: {x: 46.59797, y: 14.647, z: 14.647}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -6.65, z: 58.3}
+  m_LocalScale: {x: 46.59797, y: 14.647, z: 31.488123}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1111774623
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,6 +541,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a4f648c446d83c4286b0348668549c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridPlacementSystem
+  placedObjectTypeSOList:
+  - {fileID: 11400000, guid: 096654856dad097429210b6f4d4296c4, type: 2}
 --- !u!4 &1475869418
 Transform:
   m_ObjectHideFlags: 0
@@ -540,56 +558,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1971950424
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1971950426}
-  - component: {fileID: 1971950425}
-  m_Layer: 0
-  m_Name: TestGrid
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1971950425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1971950424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff15cfedf34cbe6419b802b46d1d5d41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TestGrid
---- !u!4 &1971950426
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1971950424}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.26532, y: 0, z: -9.73339}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 151870538}
   - {fileID: 1111774626}
-  - {fileID: 1971950426}
   - {fileID: 551312502}
   - {fileID: 1475869418}
