@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/CreditsScreen.unity
     guid: d87920716137f96449c317b558d97cd3
   - enabled: 1
+    path: Assets/Scenes/DayCounterCutscene.unity
+    guid: 200bf6f2d5b61ba4aafc51cbd3e6db69
+  - enabled: 1
     path: Assets/Scenes/ForestScene.unity
     guid: 6537afe981c97214b9402f3b289a6b7d
   m_configObjects:
