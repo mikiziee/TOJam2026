@@ -1,5 +1,8 @@
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class GrabbyHand : MonoBehaviour
 {
@@ -8,6 +11,13 @@ public class GrabbyHand : MonoBehaviour
     private InputAction interact, interactAction;
 
     public GameObject neutral, grab;
+
+    public PhysicsRaycaster raycaster;
+    public RaycastHit hit;
+    public float maxDistance = 100f;
+    public bool yellowCrosshair = false, isGoat = false;
+    public Image crosshair;
+    public AudioSource baa;
 
     private void Awake()
     {
@@ -32,6 +42,22 @@ public class GrabbyHand : MonoBehaviour
         {
             neutral.SetActive(false);
             grab.SetActive(true);
+
+            if (raycaster)
+            {
+                if (Physics.Raycast(raycaster.transform.position, raycaster.transform.forward, out hit, maxDistance))
+                {
+                    Debug.Log("Hit: " + hit.collider.name);
+                    if (isGoat)
+                    {
+                        baa.Stop();
+                        baa.time = 0.4f;
+                        baa.Play();
+                    }
+                }
+            }
+
+            
         }
     }
 
@@ -46,6 +72,27 @@ public class GrabbyHand : MonoBehaviour
         {
             neutral.SetActive(true);
             grab.SetActive(false);
+        }
+
+        if (raycaster)
+        {
+            if (Physics.Raycast(raycaster.transform.position, raycaster.transform.forward, out hit, maxDistance) && !yellowCrosshair)
+            {
+                if (hit.collider.gameObject.CompareTag("Goat"))
+                {
+                    crosshair.color = Color.magenta;
+                    isGoat = true;
+                }
+                else
+                {
+                    crosshair.color = Color.yellow;
+                }                    
+            }
+            else
+            {
+                crosshair.color = Color.white;
+                isGoat = false;
+            }
         }
     }
 }
