@@ -15,9 +15,14 @@ public class SceneSwapper : MonoBehaviour
         
     }
 
-    public void ChangeScene(string nextScene)
+    public void SetNextScene(string sceneName)
     {
-        SceneManager.LoadScene(nextScene);
+        Globals.nextScene = sceneName;
+    }
+
+    public void ChangeScene()
+    {
+        SceneManager.LoadScene(Globals.nextScene);
     }
 
     public void Quit()

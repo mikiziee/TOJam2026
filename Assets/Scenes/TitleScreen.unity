@@ -329,9 +329,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 608177282589177834}
         m_TargetAssemblyTypeName: SceneSwapper, Assembly-CSharp
-        m_MethodName: ChangeScene
+        m_MethodName: SetNextScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -339,6 +339,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: CreditsScreen
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 608177282589177833}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: FadeIN
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &25230067
@@ -842,9 +854,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 608177282589177834}
         m_TargetAssemblyTypeName: SceneSwapper, Assembly-CSharp
-        m_MethodName: ChangeScene
+        m_MethodName: SetNextScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -852,6 +864,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: ForestScene
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 608177282589177833}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: FadeIN
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &992765998
@@ -1663,6 +1687,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 641253285453451903, guid: 2a56e75bcefad27448e89ed004b9d422, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 921429133083306852, guid: 2a56e75bcefad27448e89ed004b9d422, type: 3}
       propertyPath: m_Name
       value: FadeCanvas
@@ -1752,6 +1780,22 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a56e75bcefad27448e89ed004b9d422, type: 3}
+--- !u!95 &608177282589177833 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1058823176215770239, guid: 2a56e75bcefad27448e89ed004b9d422, type: 3}
+  m_PrefabInstance: {fileID: 608177282589177832}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &608177282589177834 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5955055925169133603, guid: 2a56e75bcefad27448e89ed004b9d422, type: 3}
+  m_PrefabInstance: {fileID: 608177282589177832}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e73e1ec5fc8b3498dd5d0acac5298e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneSwapper
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
