@@ -21,8 +21,14 @@ public class EndTrigger : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Test");
-            Globals.nextScene = "DayCounterCutscene";
+            if (Globals.currentDay == 5)
+            {
+                Globals.nextScene = "EndCutscene";
+            }
+            else
+            {
+                Globals.nextScene = "DayCounterCutscene";
+            }
             Globals.currentDay++;
             animator.Play("FadeIN");
         }

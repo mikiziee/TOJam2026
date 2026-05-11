@@ -99,6 +99,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stick_01
       objectReference: {fileID: 0}
+    - target: {fileID: 9163089080217559586, guid: a66d1d9c1793f4f4ba3bc9d13cb51fee, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

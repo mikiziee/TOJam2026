@@ -19,6 +19,8 @@ public class GrabbyHand : MonoBehaviour
     public Image crosshair;
     public AudioSource baa;
 
+    [SerializeField] private LayerMask targetLayer;
+
     private void Awake()
     {
         controls = new InputSystem_Actions();
@@ -45,7 +47,7 @@ public class GrabbyHand : MonoBehaviour
 
             if (raycaster)
             {
-                if (Physics.Raycast(raycaster.transform.position, raycaster.transform.forward, out hit, maxDistance))
+                if (Physics.Raycast(raycaster.transform.position, raycaster.transform.forward, out hit, maxDistance, targetLayer))
                 {
                     Debug.Log("Hit: " + hit.collider.name);
                     if (isGoat)
@@ -76,8 +78,9 @@ public class GrabbyHand : MonoBehaviour
 
         if (raycaster)
         {
-            if (Physics.Raycast(raycaster.transform.position, raycaster.transform.forward, out hit, maxDistance) && !yellowCrosshair)
+            if (Physics.Raycast(raycaster.transform.position, raycaster.transform.forward, out hit, maxDistance, targetLayer) && !yellowCrosshair)
             {
+                //Debug.Log("Test");
                 if (hit.collider.gameObject.CompareTag("Goat"))
                 {
                     crosshair.color = Color.magenta;

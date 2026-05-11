@@ -114,9 +114,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7342118562201147308, guid: d228cb4127bd2de44923d5d05e703367, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d228cb4127bd2de44923d5d05e703367, type: 3}
       propertyPath: m_Name
       value: Pebble_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d228cb4127bd2de44923d5d05e703367, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9027857138830067924, guid: d228cb4127bd2de44923d5d05e703367, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

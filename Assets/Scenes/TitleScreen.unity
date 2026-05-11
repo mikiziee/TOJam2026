@@ -283,7 +283,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 180, y: 129}
-  m_SizeDelta: {x: 350, y: 102.868}
+  m_SizeDelta: {x: 350, y: 120.67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &25230066
 MonoBehaviour:
@@ -373,8 +373,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2b62f169ad6c04c2d9a3fa4e8c3aa694, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: a53385248c24e1148903e496d478f013, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -808,7 +808,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -180, y: 128.99998}
-  m_SizeDelta: {x: 350, y: 102.868}
+  m_SizeDelta: {x: 350, y: 120.67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &992765997
 MonoBehaviour:
@@ -898,8 +898,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2b62f169ad6c04c2d9a3fa4e8c3aa694, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: a53385248c24e1148903e496d478f013, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1278,7 +1278,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000030517578, y: 12}
-  m_SizeDelta: {x: 350, y: 102.868}
+  m_SizeDelta: {x: 350, y: 120.67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1865213070
 MonoBehaviour:
@@ -1356,8 +1356,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2b62f169ad6c04c2d9a3fa4e8c3aa694, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: a53385248c24e1148903e496d478f013, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1584,9 +1584,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.03361222
+    y: 0.054524958
     width: 1
-    height: 0.93277556
+    height: 0.8909501
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
