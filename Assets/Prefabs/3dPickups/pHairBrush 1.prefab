@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::pickupsSO
   pickupName: hairBrush
-  itemCode: 9
+  itemCode: 0
 --- !u!1001 &6469512649600239608
 PrefabInstance:
   m_ObjectHideFlags: 0
