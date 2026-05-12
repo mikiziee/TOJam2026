@@ -126,7 +126,7 @@ namespace V_AnimationSystem {
 
         // Single animation
         private string name;
-        private bool disableOverwrite;  // Cannot overwrite default animations
+        //private bool disableOverwrite;  // Cannot overwrite default animations
         private V_Skeleton_Anim[] anims;
 
         private UnitAnim(string name, V_Skeleton_Anim[] anims) {
@@ -356,7 +356,7 @@ namespace V_AnimationSystem {
             unitAnimList = new List<UnitAnim>();
 
             if (V_Animation.DATA_LOCATION == V_Animation.DataLocation.Assets) {
-                LoadFromDataFolder();
+                //LoadFromDataFolder();
             } else {
                 //RenameAnimationsInResources(); // Run once when updating resources folder
                 LoadFromResources();
@@ -391,7 +391,7 @@ namespace V_AnimationSystem {
                         continue;
                     }
                     UnitAnim unitAnim = UnitAnim.Load(readAllText);
-                    unitAnim.disableOverwrite = true;
+                    //unitAnim.disableOverwrite = true;
                     unitAnimList.Add(unitAnim);
                 }
             }
@@ -408,7 +408,7 @@ namespace V_AnimationSystem {
                     continue;
                 }
                 UnitAnim unitAnim = UnitAnim.Load(readAllText);
-                unitAnim.disableOverwrite = true;
+                //unitAnim.disableOverwrite = true;
                 unitAnimList.Add(unitAnim);
             }
 

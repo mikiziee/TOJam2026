@@ -7,7 +7,7 @@ public class HouseCharacterNPC : MonoBehaviour {
 
     public enum Axis {
         XZ,
-        XY,
+        //XY,
     }
 
     public enum State {
@@ -21,7 +21,7 @@ public class HouseCharacterNPC : MonoBehaviour {
         public float waitTime;
     }
 
-    [SerializeField] private Axis axis = Axis.XZ;
+    //[SerializeField] private Axis axis = Axis.XZ;
     [SerializeField] private float moveSpeed = 6f;
 
     [SerializeField] private List<Waypoint> waypointList;
