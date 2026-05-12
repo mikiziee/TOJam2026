@@ -82,7 +82,7 @@
                     "name": "Sprint",
                     "type": "Button",
                     "id": "641cd816-40e6-41b4-8c3d-04687c349290",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -987,6 +987,34 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "TrackedDeviceOrientation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Backpack",
+            "id": "5826add9-4957-407f-a7eb-1497f37e692e",
+            "actions": [
+                {
+                    "name": "SpawnObject",
+                    "type": "Button",
+                    "id": "8789df4b-1e7c-4e29-ab41-4b0b506182fe",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f2209562-78b9-48d3-941c-e64e97ec77ed",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "SpawnObject",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

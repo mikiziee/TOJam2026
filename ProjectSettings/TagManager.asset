@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CinemachineTarget
   - Goat
+  - BackpackItem
   layers:
   - Default
   - TransparentFX
