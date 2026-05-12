@@ -20,10 +20,10 @@ public class HouseBuildingSystem : MonoBehaviour {
 
     [SerializeField] private LayerMask placedObjectEdgeColliderLayerMask;
 
-    [SerializeField] private List<FloorEdgeObjectTypeSO> floorEdgeObjectTypeSOList = null;
+    //[SerializeField] private List<FloorEdgeObjectTypeSO> floorEdgeObjectTypeSOList = null;
     private FloorEdgeObjectTypeSO floorEdgeObjectTypeSO;
 
-    [SerializeField] private List<PlacedObjectTypeSO> placedObjectTypeSOList = null;
+    //[SerializeField] private List<PlacedObjectTypeSO> placedObjectTypeSOList = null;
     private PlacedObjectTypeSO placedObjectTypeSO;
 
     private LooseObjectSO looseObjectSO;

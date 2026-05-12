@@ -226,7 +226,7 @@ namespace V_AnimationSystem {
             unitAnimTypeList = new List<UnitAnimType>();
 
             if (V_Animation.DATA_LOCATION == V_Animation.DataLocation.Assets) {
-                LoadFromDataFolder();
+                //LoadFromDataFolder();
             } else {
                 LoadFromResources();
             }

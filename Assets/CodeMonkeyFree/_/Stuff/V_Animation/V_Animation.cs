@@ -46,11 +46,11 @@ namespace V_AnimationSystem {
 		    System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
 		    System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-US");
 
-            if (DATA_LOCATION == DataLocation.Assets) {
+            /* if (DATA_LOCATION == DataLocation.Assets) {
                 Init_Folders();
             } else {
                 //UnitAnim.RenameAnimationsInResources(); // Run once when updating resources folder
-            }
+            } */
 
             UVType.Init();
             UnitAnim.Init();

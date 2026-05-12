@@ -68,5 +68,7 @@
         "*.slnx": "*.csproj"
     },
     "dotnet.defaultSolution": "TOJam2026.slnx",
-    "dotnet.enableWorkspaceBasedDevelopment": false
+    "dotnet.enableWorkspaceBasedDevelopment": false,
+    "editor.suggest.preview": true,
+    "editor.inlineSuggest.edits.showCollapsed": true
 }
