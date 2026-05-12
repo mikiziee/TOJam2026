@@ -52,6 +52,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pebble_02
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3e15f6c74bacebb43a93fb8e968db7fb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627395615581763146, guid: 3e15f6c74bacebb43a93fb8e968db7fb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9027857138830067924, guid: 3e15f6c74bacebb43a93fb8e968db7fb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
