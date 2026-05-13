@@ -18897,6 +18897,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 965104336}
   m_SourcePrefab: {fileID: 100100000, guid: 98a9963058ee4704eac335e0eacf348d, type: 3}
+--- !u!1 &537038122 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8114637425356930397, guid: 3da832acc41704947b0fd71297b47202, type: 3}
+  m_PrefabInstance: {fileID: 971123973}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &542066467
 GameObject:
   m_ObjectHideFlags: 0
@@ -23739,6 +23744,7 @@ MonoBehaviour:
   isGoat: 0
   crosshair: {fileID: 1008924928}
   baa: {fileID: 1937970113}
+  backpack: {fileID: 537038122}
   targetLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -34599,6 +34605,107 @@ CapsuleCollider:
   m_Height: 2.7680721
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!1001 &971123973
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3428002199729518236, guid: 3da832acc41704947b0fd71297b47202, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013758426174757986, guid: 3da832acc41704947b0fd71297b47202, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013758426174757986, guid: 3da832acc41704947b0fd71297b47202, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013758426174757986, guid: 3da832acc41704947b0fd71297b47202, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013758426174757986, guid: 3da832acc41704947b0fd71297b47202, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013758426174757986, guid: 3da832acc41704947b0fd71297b47202, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013758426174757986, guid: 3da832acc41704947b0fd71297b47202, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013758426174757986, guid: 3da832acc41704947b0fd71297b47202, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013758426174757986, guid: 3da832acc41704947b0fd71297b47202, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013758426174757986, guid: 3da832acc41704947b0fd71297b47202, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013758426174757986, guid: 3da832acc41704947b0fd71297b47202, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013758426174757986, guid: 3da832acc41704947b0fd71297b47202, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013758426174757986, guid: 3da832acc41704947b0fd71297b47202, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013758426174757986, guid: 3da832acc41704947b0fd71297b47202, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013758426174757986, guid: 3da832acc41704947b0fd71297b47202, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013758426174757986, guid: 3da832acc41704947b0fd71297b47202, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013758426174757986, guid: 3da832acc41704947b0fd71297b47202, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013758426174757986, guid: 3da832acc41704947b0fd71297b47202, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013758426174757986, guid: 3da832acc41704947b0fd71297b47202, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013758426174757986, guid: 3da832acc41704947b0fd71297b47202, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013758426174757986, guid: 3da832acc41704947b0fd71297b47202, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8114637425356930397, guid: 3da832acc41704947b0fd71297b47202, type: 3}
+      propertyPath: m_Name
+      value: BagCanvas
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3da832acc41704947b0fd71297b47202, type: 3}
 --- !u!1 &973730515
 GameObject:
   m_ObjectHideFlags: 0
@@ -51073,6 +51180,7 @@ MonoBehaviour:
   isGoat: 0
   crosshair: {fileID: 0}
   baa: {fileID: 0}
+  backpack: {fileID: 0}
   targetLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -74452,7 +74560,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1024246002270147106
 RectTransform:
   m_ObjectHideFlags: 0
@@ -74537,7 +74645,7 @@ GameObject:
   - component: {fileID: 8677656194240784325}
   - component: {fileID: 2892166524118602057}
   - component: {fileID: 1480933369331797305}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: PlayerCapsule
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -74801,7 +74909,7 @@ GameObject:
   - component: {fileID: 3008764998747150639}
   - component: {fileID: 3008764998747150638}
   - component: {fileID: 3008764998747150625}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75345,9 +75453,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.06856796
+    y: 0.09250313
     width: 1
-    height: 0.8628641
+    height: 0.81499374
   near clip plane: 0.2
   far clip plane: 500
   field of view: 40
@@ -75431,7 +75539,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6519890889119020137}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlayerCameraRoot
   m_TagString: CinemachineTarget
   m_Icon: {fileID: 0}
@@ -75649,3 +75757,4 @@ SceneRoots:
   - {fileID: 512032118}
   - {fileID: 3327563684880576712}
   - {fileID: 940187554}
+  - {fileID: 971123973}
