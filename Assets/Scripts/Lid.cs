@@ -6,7 +6,7 @@ public class Lid : MonoBehaviour
 
     public void ontriggerenter2D(Collider2D other)
     {
-        if (other.CompareTag("Trinket"))
+        if (other.CompareTag("BackpackItem"))
         {
             isFull = true;
             Debug.Log("Lid is now full!");
@@ -24,14 +24,20 @@ public class Lid : MonoBehaviour
     
     void OnTriggerStay2D (Collider2D other)
     {
-        isFull = true;
-        Debug.Log ("A collider is inside the lid");
+        if (other.CompareTag("BackpackItem"))
+        {
+            isFull = true;
+            Debug.Log("A collider is inside the lid!");
+        }
     }
     
     void OnTriggerExit2D (Collider2D other)
     {
-        isFull = false;
-        Debug.Log ("A collider has exited the lid");
+        if (other.CompareTag("BackpackItem"))
+        {
+            isFull = false;
+            Debug.Log("A collider has exited the lid!");
+        }
     }
 
     public bool GetIsFull()

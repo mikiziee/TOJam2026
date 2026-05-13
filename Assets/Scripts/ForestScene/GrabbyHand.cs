@@ -19,6 +19,9 @@ public class GrabbyHand : MonoBehaviour
     public Image crosshair;
     public AudioSource baa;
 
+    public GameObject backpack;
+    public GameObject playerController;
+
     [SerializeField] private LayerMask targetLayer;
 
     private void Awake()
@@ -56,10 +59,22 @@ public class GrabbyHand : MonoBehaviour
                         baa.time = 0.4f;
                         baa.Play();
                     }
-                }
+                    else
+                    {
+                        if (backpack.activeSelf)
+                        {
+                            //HIDE BACKPACK, TURN ON CONTROLS
+                            backpack.SetActive(false);
+                            playerController.SetActive(true);
+                        }
+                        else
+                        {
+                            backpack.SetActive(true);
+                            playerController.SetActive(false);
+                        }
+                    }
+                }               
             }
-
-            
         }
     }
 

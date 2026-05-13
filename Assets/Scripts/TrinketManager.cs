@@ -1,5 +1,8 @@
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class TrinketManager : MonoBehaviour
 {
@@ -24,19 +27,15 @@ public class TrinketManager : MonoBehaviour
         {
             SpawnRandomTrinket();
         }
-
-         if (Keyboard.current.qKey.wasPressedThisFrame)
-        {
-            TrySelectObjectAtMouse();
-        }
     }
 
     public bool SpawnTrinket(int trinketId)
     {
         if (!lid.GetComponent<Lid>().GetIsFull())
         {
+            GameObject trinket;
             Debug.Log($"Spawning trinket with ID: {trinketId}");
-            Instantiate(trinketPrefabs[trinketId], transform.position, Quaternion.identity);
+            trinket = Instantiate(trinketPrefabs[trinketId], transform.position, Quaternion.identity, transform.parent);
             lastSpawnedTrinket = trinketPrefabs[trinketId];
             return true;
         }
@@ -58,20 +57,25 @@ public class TrinketManager : MonoBehaviour
     void TrySelectObjectAtMouse()
     {
         // Convert mouse position from screen space to world space
+        //Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        Vector2 mousePosition = Mouse.current.position.ReadValue();
 
         // Perform a 2D raycast at the mouse position
-        RaycastHit2D hit = Physics2D.Raycast(mouseWorldPos, Vector2.zero, 0f, LayerMask.GetMask("BackpackItems")); // Adjust layer mask as needed
+        //RaycastHit2D hit = Physics2D.Raycast(mouseWorldPos, Vector2.zero); // Adjust layer mask as needed
 
-        Debug.Log(hit.rigidbody);
-        Debug.Log("aaaaaaa");
+        Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+        var hit = Physics2D.GetRayIntersection(ray, 1500f);
 
-        if (hit.rigidbody != null)
+        //Debug.Log(hit.rigidbody);
+        //Debug.Log("aaaaaaa");
+
+        if (hit.collider.CompareTag("BackpackItem"))
         {
             Debug.Log("Clicked on object: " + hit.collider.name);
 
             // Example: highlight or interact with the object
-            // hit.collider.GetComponent<SpriteRenderer>().color = Color.red;
+            hit.collider.GetComponent<SpriteRenderer>().color = Color.yellow;
         }
         else
         {
@@ -79,5 +83,21 @@ public class TrinketManager : MonoBehaviour
         }
     }
 
+    void TrySelectUIAtMouse()
+    {
+        PointerEventData eventData = new PointerEventData(EventSystem.current);
+        eventData.position = Mouse.current.position.ReadValue();
+
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventData, results);
+
+        foreach (RaycastResult result in results)
+        {
+            if (result.gameObject.CompareTag("BackpackItem"))
+            {
+                result.gameObject.GetComponent<Image>().color = Color.yellow;
+            }
+        }
+    }
 
 }
