@@ -27,11 +27,6 @@ public class TrinketManager : MonoBehaviour
         {
             SpawnRandomTrinket();
         }
-
-         if (Keyboard.current.qKey.wasPressedThisFrame)
-        {
-            TrySelectUIAtMouse();
-        }
     }
 
     public bool SpawnTrinket(int trinketId)

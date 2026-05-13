@@ -20,6 +20,7 @@ public class GrabbyHand : MonoBehaviour
     public AudioSource baa;
 
     public GameObject backpack;
+    public GameObject playerController;
 
     [SerializeField] private LayerMask targetLayer;
 
@@ -58,16 +59,21 @@ public class GrabbyHand : MonoBehaviour
                         baa.time = 0.4f;
                         baa.Play();
                     }
-                }
-
-                if (backpack.activeSelf)
-                {
-                    backpack.SetActive(false);
-                }
-                else
-                {
-                    backpack.SetActive(true);
-                }
+                    else
+                    {
+                        if (backpack.activeSelf)
+                        {
+                            //HIDE BACKPACK, TURN ON CONTROLS
+                            backpack.SetActive(false);
+                            playerController.SetActive(true);
+                        }
+                        else
+                        {
+                            backpack.SetActive(true);
+                            playerController.SetActive(false);
+                        }
+                    }
+                }               
             }
         }
     }
