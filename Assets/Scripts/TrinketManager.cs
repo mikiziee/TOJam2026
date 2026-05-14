@@ -9,7 +9,7 @@ public class TrinketManager : MonoBehaviour
     private GameObject lastSpawnedTrinket;
     [SerializeField] private GameObject[] trinketPrefabs;
     [SerializeField] private GameObject lid;
-    
+
 
     /* void Start()
     {
@@ -21,13 +21,47 @@ public class TrinketManager : MonoBehaviour
         }
     } */
 
+    public InputSystem_Actions controls;
+    private InputAction left, right;
+
+    private void Awake()
+    {
+        controls = new InputSystem_Actions();
+    }
+
+    private void OnEnable()
+    {
+        left = controls.Player.LeftInteract;
+        right = controls.Player.Interact;
+        left.Enable();
+        right.Enable();
+    }
+
+    private void OnDisable()
+    {
+        left.Disable();
+        right.Disable();
+    }
+
     void Update()
     {
         if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
             SpawnRandomTrinket();
         }
+
+        if (left.IsPressed() && transform.localPosition.x >= -2)
+        {
+            transform.localPosition = transform.localPosition - new Vector3(0.01f, 0, 0);
+        }
+
+        if (right.IsPressed() && transform.localPosition.x <= 2)
+        {
+            transform.localPosition = transform.localPosition + new Vector3(0.01f, 0, 0);
+        }
     }
+
+
 
     public bool SpawnTrinket(int trinketId)
     {
@@ -44,7 +78,6 @@ public class TrinketManager : MonoBehaviour
             Debug.Log("Cannot spawn trinket: Lid is full!");
             return false;
         }
-        
     }
     
     
