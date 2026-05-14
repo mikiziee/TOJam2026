@@ -50,6 +50,7 @@ public class InventoryTetrisManualPlacement : MonoBehaviour {
 
             bool tryPlaceItem = inventoryTetris.TryPlaceItem(placedObjectTypeSO as ItemTetrisSO, placedObjectOrigin, dir);
 
+            Debug.Log("Try Place Item: " + tryPlaceItem);
             if (tryPlaceItem) {
                 OnObjectPlaced?.Invoke(this, EventArgs.Empty);
             } else {
@@ -71,7 +72,8 @@ public class InventoryTetrisManualPlacement : MonoBehaviour {
         if (Keyboard.current.digit6Key.wasPressedThisFrame) { placedObjectTypeSO = placedObjectTypeSOList[5]; RefreshSelectedObjectType(); }
         if (Keyboard.current.digit7Key.wasPressedThisFrame) { placedObjectTypeSO = placedObjectTypeSOList[6]; RefreshSelectedObjectType(); }
         if (Keyboard.current.digit8Key.wasPressedThisFrame) { placedObjectTypeSO = placedObjectTypeSOList[7]; RefreshSelectedObjectType(); }
-
+        if (Keyboard.current.digit8Key.wasPressedThisFrame) { placedObjectTypeSO = placedObjectTypeSOList[8]; RefreshSelectedObjectType(); }
+        if (Keyboard.current.digit9Key.wasPressedThisFrame) { placedObjectTypeSO = placedObjectTypeSOList[9]; RefreshSelectedObjectType(); }
         if (Keyboard.current.digit0Key.wasPressedThisFrame) { DeselectObjectType(); }
 
         // Demolish
