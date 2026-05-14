@@ -22,6 +22,8 @@ public class GrabbyHand : MonoBehaviour
     public GameObject backpack;
     public GameObject playerController;
 
+    public GrabbyHand otherHand;
+
     [SerializeField] private LayerMask targetLayer;
 
     private void Awake()
@@ -61,17 +63,14 @@ public class GrabbyHand : MonoBehaviour
                     }
                     else
                     {
-                        if (backpack.activeSelf)
-                        {
-                            //HIDE BACKPACK, TURN ON CONTROLS
-                            backpack.SetActive(false);
-                            playerController.SetActive(true);
-                        }
-                        else
-                        {
-                            backpack.SetActive(true);
-                            playerController.SetActive(false);
-                        }
+                        backpack.SetActive(true);
+                        playerController.SetActive(false);
+                        interact.Disable();
+                        neutral.SetActive(true);
+                        grab.SetActive(false);
+                        otherHand.interact.Disable();
+                        otherHand.neutral.SetActive(true);
+                        otherHand.grab.SetActive(false);
                     }
                 }               
             }

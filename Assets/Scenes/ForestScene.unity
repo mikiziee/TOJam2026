@@ -23746,6 +23746,7 @@ MonoBehaviour:
   baa: {fileID: 1937970113}
   backpack: {fileID: 537038122}
   playerController: {fileID: 1480933369331797301}
+  otherHand: {fileID: 1427843579}
   targetLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -51204,6 +51205,7 @@ MonoBehaviour:
   baa: {fileID: 0}
   backpack: {fileID: 0}
   playerController: {fileID: 0}
+  otherHand: {fileID: 0}
   targetLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -75477,9 +75479,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.039051473
+    y: 0.12086716
     width: 1
-    height: 0.92189705
+    height: 0.7582657
   near clip plane: 0.2
   far clip plane: 500
   field of view: 40
