@@ -13,14 +13,18 @@ public class InventoryTetrisAssets : MonoBehaviour {
 
     public ItemTetrisSO[] itemTetrisSOArray;
 
-    public ItemTetrisSO ammo;
-    public ItemTetrisSO grenade;
-    public ItemTetrisSO katana;
-    public ItemTetrisSO medkit;
-    public ItemTetrisSO pistol;
-    public ItemTetrisSO rifle;
-    public ItemTetrisSO shotgun;
-    public ItemTetrisSO money;
+    public ItemTetrisSO hairbrush;
+    public ItemTetrisSO pebble;
+    public ItemTetrisSO rubberDuck;
+    public ItemTetrisSO sandwich;
+    public ItemTetrisSO shampooBottle;
+    public ItemTetrisSO snail;
+    public ItemTetrisSO stick;
+    public ItemTetrisSO toiletRoll;
+
+    public ItemTetrisSO toothbrush;
+    public ItemTetrisSO waterBottle;
+
 
     public ItemTetrisSO GetItemTetrisSOFromName(string itemTetrisSOName) {
         foreach (ItemTetrisSO itemTetrisSO in itemTetrisSOArray) {

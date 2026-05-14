@@ -4621,13 +4621,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 215038713}
   placedObjectTypeSOList:
-  - {fileID: 11400000, guid: 17d2d197e5567d44ebfb0b9a2c1d2285, type: 2}
-  - {fileID: 11400000, guid: 9ab5d4282cbe1c847a7d2196e6eca1ab, type: 2}
-  - {fileID: 11400000, guid: 54269fedf7f5f984baebe33f17f3cbe1, type: 2}
-  - {fileID: 11400000, guid: 32ab6ed60b5952c4f935522a536a62d5, type: 2}
-  - {fileID: 11400000, guid: 7a8f219e775244441a739fc209360248, type: 2}
-  - {fileID: 11400000, guid: 570854d3fb2db6d49800100d6aed8cec, type: 2}
-  - {fileID: 11400000, guid: 9e77a741d89106544b052d1f71f3cd94, type: 2}
+  - {fileID: 11400000, guid: 5cfaf4fd3ffcdb14884ef8734878b609, type: 2}
+  - {fileID: 11400000, guid: 21b797e99f4aeab44a39e8c0a24b3c23, type: 2}
+  - {fileID: 11400000, guid: fa748b465c28d6b498fcd0a5b221b6aa, type: 2}
+  - {fileID: 11400000, guid: e970535072424c9448c99fec24a311c8, type: 2}
+  - {fileID: 11400000, guid: 0147fcf723253894692767041ed073ea, type: 2}
+  - {fileID: 11400000, guid: 2bd57a2e1f2c22b44ae5d976c82a331e, type: 2}
+  - {fileID: 11400000, guid: cc80fdf783871d84e81af8ac16c644b0, type: 2}
+  - {fileID: 11400000, guid: e41dc8dbced043d44bcb148543ecda1d, type: 2}
+  - {fileID: 11400000, guid: 594bdd51a97751d4291dbb55814c8a39, type: 2}
+  - {fileID: 11400000, guid: 272750117d4d4b640a03c3a1d20626f8, type: 2}
 --- !u!1 &482502439
 GameObject:
   m_ObjectHideFlags: 0
@@ -7826,22 +7829,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemTetrisSOArray:
-  - {fileID: 11400000, guid: 570854d3fb2db6d49800100d6aed8cec, type: 2}
-  - {fileID: 11400000, guid: 17d2d197e5567d44ebfb0b9a2c1d2285, type: 2}
-  - {fileID: 11400000, guid: 9ab5d4282cbe1c847a7d2196e6eca1ab, type: 2}
-  - {fileID: 11400000, guid: 9e77a741d89106544b052d1f71f3cd94, type: 2}
-  - {fileID: 11400000, guid: 54269fedf7f5f984baebe33f17f3cbe1, type: 2}
-  - {fileID: 11400000, guid: 126007ae796f8c44696f4dc31350e046, type: 2}
-  - {fileID: 11400000, guid: 32ab6ed60b5952c4f935522a536a62d5, type: 2}
-  - {fileID: 11400000, guid: 7a8f219e775244441a739fc209360248, type: 2}
-  ammo: {fileID: 11400000, guid: 17d2d197e5567d44ebfb0b9a2c1d2285, type: 2}
-  grenade: {fileID: 11400000, guid: 9ab5d4282cbe1c847a7d2196e6eca1ab, type: 2}
-  katana: {fileID: 11400000, guid: 9e77a741d89106544b052d1f71f3cd94, type: 2}
-  medkit: {fileID: 11400000, guid: 54269fedf7f5f984baebe33f17f3cbe1, type: 2}
-  pistol: {fileID: 11400000, guid: 32ab6ed60b5952c4f935522a536a62d5, type: 2}
-  rifle: {fileID: 11400000, guid: 7a8f219e775244441a739fc209360248, type: 2}
-  shotgun: {fileID: 11400000, guid: 570854d3fb2db6d49800100d6aed8cec, type: 2}
-  money: {fileID: 11400000, guid: 126007ae796f8c44696f4dc31350e046, type: 2}
+  - {fileID: 11400000, guid: 5cfaf4fd3ffcdb14884ef8734878b609, type: 2}
+  - {fileID: 11400000, guid: 21b797e99f4aeab44a39e8c0a24b3c23, type: 2}
+  - {fileID: 11400000, guid: fa748b465c28d6b498fcd0a5b221b6aa, type: 2}
+  - {fileID: 11400000, guid: e970535072424c9448c99fec24a311c8, type: 2}
+  - {fileID: 11400000, guid: 0147fcf723253894692767041ed073ea, type: 2}
+  - {fileID: 11400000, guid: 2bd57a2e1f2c22b44ae5d976c82a331e, type: 2}
+  - {fileID: 11400000, guid: cc80fdf783871d84e81af8ac16c644b0, type: 2}
+  - {fileID: 11400000, guid: e41dc8dbced043d44bcb148543ecda1d, type: 2}
+  - {fileID: 11400000, guid: 594bdd51a97751d4291dbb55814c8a39, type: 2}
+  - {fileID: 11400000, guid: 272750117d4d4b640a03c3a1d20626f8, type: 2}
+  hairbrush: {fileID: 11400000, guid: 5cfaf4fd3ffcdb14884ef8734878b609, type: 2}
+  pebble: {fileID: 11400000, guid: 21b797e99f4aeab44a39e8c0a24b3c23, type: 2}
+  rubberDuck: {fileID: 11400000, guid: fa748b465c28d6b498fcd0a5b221b6aa, type: 2}
+  sandwich: {fileID: 11400000, guid: e970535072424c9448c99fec24a311c8, type: 2}
+  shampooBottle: {fileID: 11400000, guid: 0147fcf723253894692767041ed073ea, type: 2}
+  snail: {fileID: 11400000, guid: 2bd57a2e1f2c22b44ae5d976c82a331e, type: 2}
+  stick: {fileID: 11400000, guid: cc80fdf783871d84e81af8ac16c644b0, type: 2}
+  toiletRoll: {fileID: 11400000, guid: e41dc8dbced043d44bcb148543ecda1d, type: 2}
+  toothbrush: {fileID: 11400000, guid: 594bdd51a97751d4291dbb55814c8a39, type: 2}
+  waterBottle: {fileID: 11400000, guid: 272750117d4d4b640a03c3a1d20626f8, type: 2}
   gridBackground: {fileID: 21300000, guid: 20b8ba606d245e44daaa029221887240, type: 3}
   gridBackground_2: {fileID: 21300000, guid: 1002273b6e4ac3f49bb60ebe88b4c842, type: 3}
   gridBackground_3: {fileID: 21300000, guid: 4f162c4c46d0e2a4a959e6b54d608b97, type: 3}
@@ -8191,9 +8198,7 @@ MonoBehaviour:
   inventoryTetris: {fileID: 1624855258}
   outerInventoryTetris: {fileID: 477014274}
   addItemTetrisSaveList:
-  - '{"addItemTetrisList":[{"itemTetrisSOName":"Ammo","gridPosition":{"x":1,"y":1},"dir":0},{"itemTetrisSOName":"Grenade","gridPosition":{"x":3,"y":3},"dir":0},{"itemTetrisSOName":"Pistol","gridPosition":{"x":2,"y":6},"dir":0},{"itemTetrisSOName":"Medkit","gridPosition":{"x":6,"y":3},"dir":0}]}'
-  - '{"addItemTetrisList":[{"itemTetrisSOName":"Grenade","gridPosition":{"x":2,"y":1},"dir":0},{"itemTetrisSOName":"Katana","gridPosition":{"x":2,"y":4},"dir":0},{"itemTetrisSOName":"Ammo","gridPosition":{"x":3,"y":1},"dir":0},{"itemTetrisSOName":"Ammo","gridPosition":{"x":3,"y":2},"dir":0},{"itemTetrisSOName":"Rifle","gridPosition":{"x":5,"y":1},"dir":0}]}'
-  - '{"addItemTetrisList":[{"itemTetrisSOName":"Ammo","gridPosition":{"x":1,"y":3},"dir":0},{"itemTetrisSOName":"Pistol","gridPosition":{"x":1,"y":1},"dir":3},{"itemTetrisSOName":"Ammo","gridPosition":{"x":2,"y":3},"dir":0},{"itemTetrisSOName":"Grenade","gridPosition":{"x":2,"y":7},"dir":0},{"itemTetrisSOName":"Money","gridPosition":{"x":4,"y":2},"dir":1},{"itemTetrisSOName":"Money","gridPosition":{"x":4,"y":1},"dir":0},{"itemTetrisSOName":"Money","gridPosition":{"x":5,"y":2},"dir":1},{"itemTetrisSOName":"Money","gridPosition":{"x":4,"y":4},"dir":0},{"itemTetrisSOName":"Shotgun","gridPosition":{"x":7,"y":1},"dir":1}]}'
+  - '{"addItemTetrisList":[{"itemTetrisSOName":"Stick","gridPosition":{"x":1,"y":1},"dir":0},{"itemTetrisSOName":"Snail","gridPosition":{"x":3,"y":3},"dir":0}]}'
 --- !u!4 &985983826
 Transform:
   m_ObjectHideFlags: 0
@@ -13380,14 +13385,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 215038713}
   placedObjectTypeSOList:
-  - {fileID: 11400000, guid: 17d2d197e5567d44ebfb0b9a2c1d2285, type: 2}
-  - {fileID: 11400000, guid: 9ab5d4282cbe1c847a7d2196e6eca1ab, type: 2}
-  - {fileID: 11400000, guid: 54269fedf7f5f984baebe33f17f3cbe1, type: 2}
-  - {fileID: 11400000, guid: 32ab6ed60b5952c4f935522a536a62d5, type: 2}
-  - {fileID: 11400000, guid: 7a8f219e775244441a739fc209360248, type: 2}
-  - {fileID: 11400000, guid: 570854d3fb2db6d49800100d6aed8cec, type: 2}
-  - {fileID: 11400000, guid: 9e77a741d89106544b052d1f71f3cd94, type: 2}
-  - {fileID: 11400000, guid: 126007ae796f8c44696f4dc31350e046, type: 2}
+  - {fileID: 11400000, guid: 5cfaf4fd3ffcdb14884ef8734878b609, type: 2}
+  - {fileID: 11400000, guid: 21b797e99f4aeab44a39e8c0a24b3c23, type: 2}
+  - {fileID: 11400000, guid: fa748b465c28d6b498fcd0a5b221b6aa, type: 2}
+  - {fileID: 11400000, guid: e970535072424c9448c99fec24a311c8, type: 2}
+  - {fileID: 11400000, guid: 0147fcf723253894692767041ed073ea, type: 2}
+  - {fileID: 11400000, guid: 2bd57a2e1f2c22b44ae5d976c82a331e, type: 2}
+  - {fileID: 11400000, guid: cc80fdf783871d84e81af8ac16c644b0, type: 2}
+  - {fileID: 11400000, guid: e41dc8dbced043d44bcb148543ecda1d, type: 2}
+  - {fileID: 11400000, guid: 594bdd51a97751d4291dbb55814c8a39, type: 2}
+  - {fileID: 11400000, guid: 272750117d4d4b640a03c3a1d20626f8, type: 2}
 --- !u!1 &1658820612
 GameObject:
   m_ObjectHideFlags: 0
