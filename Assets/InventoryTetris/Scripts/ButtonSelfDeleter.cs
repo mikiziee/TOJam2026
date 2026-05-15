@@ -11,25 +11,30 @@ public class ButtonSelfDeleter : MonoBehaviour
     [SerializeField] private ParkItemSpawner targetInventoryTetris;
     private bool canBeDeleted = false;
 
-
-    public void SetCanBeDeleted(bool canBeDeleted)
+    void Update()
     {
-        this.canBeDeleted = canBeDeleted;
+        if (canBeDeleted)
+        {
+            Debug.Log("update destroying game object...");
+            Destroy(gameObject);
+        }
     }
-    
+
     public void CheckCanBeDeleted()
     {
-        if(ParkItemSpawner.Instance.inventoryTetris.TryPlaceItem(ParkItemSpawner.Instance.placedObjectTypeSO as ItemTetrisSO, Vector2Int.zero, ParkItemSpawner.Instance.dir) == true)
+        Debug.Log("Checking if can be deleted...");
+        Debug.Log(ParkItemSpawner.Instance.inventoryTetris.TryPlaceItem(ParkItemSpawner.Instance.placedObjectTypeSO as ItemTetrisSO, Vector2Int.zero, ParkItemSpawner.Instance.dir));
+        if(ParkItemSpawner.Instance.inventoryTetris.TryPlaceItem(ParkItemSpawner.Instance.placedObjectTypeSO as ItemTetrisSO, Vector2Int.zero, ParkItemSpawner.Instance.dir))
         {
             ParkItemSpawner.Instance.inventoryTetris.RemoveItemAt(Vector2Int.zero);
-            canBeDeleted = true;
+            canBeDeleted = false;
+            Debug.Log("Can be deleted: " + canBeDeleted);
         }
         else
         {
-            canBeDeleted = false;
-        }
-        if(canBeDeleted == true)
-        {
+            canBeDeleted = true;
+            Debug.Log("Can be deleted: " + canBeDeleted);
+            Debug.Log("Destroying game object...");
             Destroy(gameObject);
         }
         
