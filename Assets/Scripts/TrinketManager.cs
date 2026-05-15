@@ -9,17 +9,10 @@ public class TrinketManager : MonoBehaviour
     private GameObject lastSpawnedTrinket;
     [SerializeField] private GameObject[] trinketPrefabs;
     [SerializeField] private GameObject lid;
-
-
-    /* void Start()
-    {
-        
-        for (int i = 0; i < trinketPrefabs.Length; i++)
-        {
-            SpawnTrinket(i); // Example: Spawn the first trinket at the start
-            Debug.Log($"Trinket {i}: {trinketPrefabs[i].name}");
-        }
-    } */
+    public int currentObj = 0;
+    public GameObject trinket;
+    public GrabbyHand hand;
+    public bool isFull = false, hasSpawned = false;
 
     public InputSystem_Actions controls;
     private InputAction left, right;
@@ -45,9 +38,10 @@ public class TrinketManager : MonoBehaviour
 
     void Update()
     {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        if (Keyboard.current.spaceKey.wasPressedThisFrame && !hasSpawned)
         {
             SpawnRandomTrinket();
+            hasSpawned = true;
         }
 
         if (left.IsPressed() && transform.localPosition.x >= -2)
@@ -59,32 +53,40 @@ public class TrinketManager : MonoBehaviour
         {
             transform.localPosition = transform.localPosition + new Vector3(0.01f, 0, 0);
         }
-    }
 
-
-
-    public bool SpawnTrinket(int trinketId)
-    {
-        if (!lid.GetComponent<Lid>().GetIsFull())
+        if (trinket != null && trinket.GetComponent<Rigidbody2D>().IsSleeping())
         {
-            GameObject trinket;
-            Debug.Log($"Spawning trinket with ID: {trinketId}");
-            trinket = Instantiate(trinketPrefabs[trinketId], transform.position, Quaternion.identity, transform.parent);
-            lastSpawnedTrinket = trinketPrefabs[trinketId];
-            return true;
+            trinket = null;
+            hasSpawned = false;
+            hand.Close();
+        }
+
+        if (lid.GetComponent<Lid>().GetIsFull())
+        {
+            isFull = true;
         }
         else
         {
-            Debug.Log("Cannot spawn trinket: Lid is full!");
-            return false;
+            isFull = false;
         }
     }
-    
-    
+
+
+
+    public void SpawnTrinket(int trinketId)
+    {
+        if (!lid.GetComponent<Lid>().GetIsFull())
+        {           
+            //Debug.Log($"Spawning trinket with ID: {trinketId}");
+            trinket = Instantiate(trinketPrefabs[trinketId], transform.position, Quaternion.identity, transform.parent);
+            Globals.inventory[Globals.inventoryIndex] = currentObj;
+            Globals.inventoryIndex++;
+        }
+    }
+
     public void SpawnRandomTrinket()
     {
-        Debug.Log("Spawning random trinket...");
-        SpawnTrinket(Random.Range(0, trinketPrefabs.Length));
+        SpawnTrinket(currentObj);
     }
 
     void TrySelectObjectAtMouse()

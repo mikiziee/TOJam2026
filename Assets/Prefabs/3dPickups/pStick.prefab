@@ -106,8 +106,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9163089080217559586, guid: a66d1d9c1793f4f4ba3bc9d13cb51fee, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5314960248650753415}
   m_SourcePrefab: {fileID: 100100000, guid: a66d1d9c1793f4f4ba3bc9d13cb51fee, type: 3}
+--- !u!1 &2342846122876259408 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9163089080217559586, guid: a66d1d9c1793f4f4ba3bc9d13cb51fee, type: 3}
+  m_PrefabInstance: {fileID: 6893501239562088050}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5314960248650753415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2342846122876259408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34d517f27d9267145b902bf34a7c2720, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::pickupsSO
+  pickupName: stick
+  itemCode: 4
 --- !u!4 &6350105882364037529 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a66d1d9c1793f4f4ba3bc9d13cb51fee, type: 3}
