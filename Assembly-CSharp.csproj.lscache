@@ -487,6 +487,7 @@ Assets/CodeMonkeyFree/
 Assets/
  InputSystem_Actions.cs
  InventoryTetris/Scripts/
+  ButtonSelfDeleter.cs
   InventoryTetris.cs
   InventoryTetrisAssets.cs
   InventoryTetrisBackground.cs
@@ -495,9 +496,9 @@ Assets/
   InventoryTetrisManualPlacement.cs
   InventoryTetrisTesting.cs
   InventoryTetris_Old.cs
-  ItemComponentSpawnerr.cs
   ItemTetrisGhost.cs
   ItemTetrisSO.cs
+  ParkItemSpawner.cs
  Scripts/
   BagItems.cs
   CameraRatio.cs
