@@ -137,10 +137,32 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -7342118562201147308, guid: d228cb4127bd2de44923d5d05e703367, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8070025421344433171}
   m_SourcePrefab: {fileID: 100100000, guid: d228cb4127bd2de44923d5d05e703367, type: 3}
 --- !u!4 &2661193312676703151 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d228cb4127bd2de44923d5d05e703367, type: 3}
   m_PrefabInstance: {fileID: 2550387909848992836}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4143103145095128080 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7342118562201147308, guid: d228cb4127bd2de44923d5d05e703367, type: 3}
+  m_PrefabInstance: {fileID: 2550387909848992836}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8070025421344433171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4143103145095128080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34d517f27d9267145b902bf34a7c2720, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::pickupsSO
+  pickupName: pebble
+  itemCode: 9

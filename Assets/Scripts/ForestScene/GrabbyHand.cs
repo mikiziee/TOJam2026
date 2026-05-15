@@ -20,7 +20,10 @@ public class GrabbyHand : MonoBehaviour
     public AudioSource baa;
 
     public GameObject backpack;
+    public TrinketManager trinketSpawner;
     public GameObject playerController;
+    public GameObject fullIndicator;
+    public GameObject tutorialObj;
 
     public GrabbyHand otherHand;
 
@@ -63,14 +66,7 @@ public class GrabbyHand : MonoBehaviour
                     }
                     else
                     {
-                        backpack.SetActive(true);
-                        playerController.SetActive(false);
-                        interact.Disable();
-                        neutral.SetActive(true);
-                        grab.SetActive(false);
-                        otherHand.interact.Disable();
-                        otherHand.neutral.SetActive(true);
-                        otherHand.grab.SetActive(false);
+                        Grab();
                     }
                 }               
             }
@@ -80,6 +76,51 @@ public class GrabbyHand : MonoBehaviour
     private void Start() //for btn release
     {
         interactAction = controls.FindAction("Interact");
+
+        System.Array.Clear(Globals.inventory, 0, Globals.inventory.Length);
+        Globals.inventoryIndex = 0;
+
+        if (Globals.currentDay == 1)
+        {
+            tutorialObj.SetActive(true);
+        }
+    }
+
+    public void Grab()
+    {
+        pickupsSO pickup = hit.collider.gameObject.GetComponent<pickupsSO>();
+        backpack.SetActive(true);
+        trinketSpawner = backpack.transform.Find("BackpackContainer/TrinketManager").gameObject.GetComponent<TrinketManager>();
+
+        if (trinketSpawner.isFull)
+        {
+            backpack.SetActive(false);
+            fullIndicator.SetActive(true);
+        }
+        else
+        {
+            trinketSpawner.currentObj = pickup.GetItemCode();
+            playerController.SetActive(false);
+            interact.Disable();
+            neutral.SetActive(false);
+            grab.SetActive(true);
+            otherHand.interact.Disable();
+            otherHand.neutral.SetActive(false);
+            otherHand.grab.SetActive(true);
+            Destroy(hit.collider.gameObject);
+        }
+    }
+
+    public void Close()
+    {
+        playerController.SetActive(true);
+        interact.Enable();
+        otherHand.interact.Enable();
+        neutral.SetActive(true);
+        grab.SetActive(false);
+        otherHand.neutral.SetActive(true);
+        otherHand.grab.SetActive(false);
+        backpack.SetActive(false);
     }
 
     private void Update()
