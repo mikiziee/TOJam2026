@@ -28,4 +28,10 @@ public class ButtonSelfDeleter : MonoBehaviour
         wasClicked = false;
     }
 
+    public void IncreaseDay()
+    {
+        Globals.currentDay++;
+        print("Current day increased to: " + Globals.currentDay);
+    }
+
 }

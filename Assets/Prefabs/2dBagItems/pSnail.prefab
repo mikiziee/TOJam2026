@@ -38,8 +38,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.3395, y: 3.94823}
-  m_SizeDelta: {x: 2.5, y: 2.5}
+  m_AnchoredPosition: {x: 3.2162, y: 3.7434}
+  m_SizeDelta: {x: 2.2557, y: 2.033}
   m_Pivot: {x: 0.50491637, y: 0.43854466}
 --- !u!212 &3579320122282842188
 SpriteRenderer:
@@ -98,7 +98,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!114 &6704426166728370786
 MonoBehaviour:
@@ -120,9 +120,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ab8baecf5e25ba94090b6b4ba7272247, type: 3}
+  m_Sprite: {fileID: 1131618872, guid: ab8baecf5e25ba94090b6b4ba7272247, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -191,8 +191,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.010893699, y: 0.24}
-  m_Size: {x: 2.19, y: 1.21}
+  m_Offset: {x: -0.010893696, y: 0.06757582}
+  m_Size: {x: 2.1900005, y: 0.9369967}
   m_Direction: 1
 --- !u!114 &4522174870526311879
 MonoBehaviour:

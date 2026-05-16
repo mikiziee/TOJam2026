@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 499363216705329932}
   - component: {fileID: 4606224349800772812}
   - component: {fileID: 6591192649421011155}
+  - component: {fileID: -2079463188998506311}
   m_Layer: 5
   m_Name: pShampooButton
   m_TagString: Untagged
@@ -120,10 +121,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ParkItemSpawner, Assembly-CSharp
-        m_MethodName: SpawnItem
-        m_Mode: 3
+      - m_Target: {fileID: -2079463188998506311}
+        m_TargetAssemblyTypeName: ButtonSelfDeleter, Assembly-CSharp
+        m_MethodName: OnButtonClicked
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -144,3 +145,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &-2079463188998506311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3636704245903703086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f7b548cf7d5d784bba7f453fd03c934, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSelfDeleter
