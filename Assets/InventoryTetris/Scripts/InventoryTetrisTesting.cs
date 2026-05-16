@@ -7,27 +7,56 @@ using UnityEngine.InputSystem;
 public class InventoryTetrisTesting : MonoBehaviour {
 
     [SerializeField] private Transform outerInventoryTetrisBackground;
-    [SerializeField] private InventoryTetris inventoryTetris;
-    [SerializeField] private InventoryTetris outerInventoryTetris;
+    [SerializeField] private InventoryTetris inventoryTetrisTrunk;
+    [SerializeField] private InventoryTetris inventoryTetrisFrontMid;
+    [SerializeField] private InventoryTetris inventoryTetrisFrontRight;
+    [SerializeField] private InventoryTetris bagInventoryTetris;
     [SerializeField] private List<string> addItemTetrisSaveList;
 
-    private int addItemTetrisSaveListIndex;
+    private int addItemTetrisSaveListIndexTrunk;
 
     private void Start() {
-        outerInventoryTetrisBackground.gameObject.SetActive(false);
+        //outerInventoryTetrisBackground.gameObject.SetActive(false);
+
+        //load bag item for debug
+        bagInventoryTetris.Load(addItemTetrisSaveList[addItemTetrisSaveListIndexTrunk]);
+        addItemTetrisSaveListIndexTrunk = (addItemTetrisSaveListIndexTrunk + 1) % addItemTetrisSaveList.Count;
+
+        if(Globals.currentDay > 1)
+        {
+            inventoryTetrisTrunk.Load(Globals.carTetrisSaveList[0]);
+            inventoryTetrisFrontMid.Load(Globals.carTetrisSaveList[1]);
+            inventoryTetrisFrontRight.Load(Globals.carTetrisSaveList[2]);
+        }
+
+
     }
 
     private void Update() {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame) {
-            outerInventoryTetrisBackground.gameObject.SetActive(true);
-            outerInventoryTetris.Load(addItemTetrisSaveList[addItemTetrisSaveListIndex]);
+    //     if (Keyboard.current.spaceKey.wasPressedThisFrame) {
+    //         outerInventoryTetrisBackground.gameObject.SetActive(true);
+    //         outerInventoryTetris.Load(addItemTetrisSaveList[addItemTetrisSaveListIndex]);
 
-            addItemTetrisSaveListIndex = (addItemTetrisSaveListIndex + 1) % addItemTetrisSaveList.Count;
-        }
+    //         addItemTetrisSaveListIndex = (addItemTetrisSaveListIndex + 1) % addItemTetrisSaveList.Count;
+    //     }
 
         if (Keyboard.current.pKey.wasPressedThisFrame) {
-            Debug.Log(inventoryTetris.Save());
+            Globals.carTetrisSaveList[0] = inventoryTetrisTrunk.Save();
+            Debug.Log("Saved Car Trunk Inventory: " + Globals.carTetrisSaveList[0]);
+            Globals.carTetrisSaveList[1] = inventoryTetrisFrontMid.Save();
+            Debug.Log("Saved Car Front Mid Inventory: " + Globals.carTetrisSaveList[1]);  
+            Globals.carTetrisSaveList[2] = inventoryTetrisFrontRight.Save();
+            Debug.Log("Saved Car Front Right Inventory: " + Globals.carTetrisSaveList[2]);
         }
+    }
+
+    public void SaveCarInventory() {
+        Globals.carTetrisSaveList[0] = inventoryTetrisTrunk.Save();
+        Debug.Log("Saved Car Trunk Inventory: " + Globals.carTetrisSaveList[0]);
+        Globals.carTetrisSaveList[1] = inventoryTetrisFrontMid.Save();
+        Debug.Log("Saved Car Front Mid Inventory: " + Globals.carTetrisSaveList[1]);  
+        Globals.carTetrisSaveList[2] = inventoryTetrisFrontRight.Save();
+        Debug.Log("Saved Car Front Right Inventory: " + Globals.carTetrisSaveList[2]);
     }
 
 }

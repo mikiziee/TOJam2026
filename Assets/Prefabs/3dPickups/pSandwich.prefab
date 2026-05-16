@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::pickupsSO
   pickupName: sandwich
-  itemCode: 7
+  itemCode: 3
 --- !u!1001 &5908779625525318666
 PrefabInstance:
   m_ObjectHideFlags: 0

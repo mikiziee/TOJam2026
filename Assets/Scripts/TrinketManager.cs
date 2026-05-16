@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -79,8 +80,12 @@ public class TrinketManager : MonoBehaviour
         {           
             //Debug.Log($"Spawning trinket with ID: {trinketId}");
             trinket = Instantiate(trinketPrefabs[trinketId], transform.position, Quaternion.identity, transform.parent);
-            Globals.inventory[Globals.inventoryIndex] = currentObj;
-            Globals.inventoryIndex++;
+
+            Globals.inventory.Add(currentObj);
+            
+            // Globals.inventory[Globals.inventoryIndex] = currentObj; <===== was used for arry but i switched it to list
+            // Globals.inventoryIndex++;
+            
         }
     }
 

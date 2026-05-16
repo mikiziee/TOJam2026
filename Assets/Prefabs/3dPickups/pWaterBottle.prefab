@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::pickupsSO
   pickupName: waterBottle
-  itemCode: 1
+  itemCode: 9
 --- !u!1001 &6681978924034314177
 PrefabInstance:
   m_ObjectHideFlags: 0

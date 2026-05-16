@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::pickupsSO
   pickupName: stick
-  itemCode: 4
+  itemCode: 6
 --- !u!1001 &6893501239562088050
 PrefabInstance:
   m_ObjectHideFlags: 0

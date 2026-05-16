@@ -145,7 +145,7 @@ Rigidbody2D:
   m_Mass: 1.2207098
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 10
+  m_GravityScale: 50
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df86531357fd05b4c8b95cef8267e852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BagItems
-  id: 2
+  id: 8
 --- !u!222 &197553907630431977
 CanvasRenderer:
   m_ObjectHideFlags: 0

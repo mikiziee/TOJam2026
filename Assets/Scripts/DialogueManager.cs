@@ -6,6 +6,11 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] TMP_Text dialogueTextComponent;
     [SerializeField] TMP_Text dayTextComponent;
 
+    void Awake()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
     void Start()
     
     {

@@ -75,9 +75,15 @@ public class GrabbyHand : MonoBehaviour
 
     private void Start() //for btn release
     {
+        // Lock cursor to center
+        Cursor.lockState = CursorLockMode.Locked;
+        // Hide cursor
+        Cursor.visible = false;
         interactAction = controls.FindAction("Interact");
 
-        System.Array.Clear(Globals.inventory, 0, Globals.inventory.Length);
+        //System.Array.Clear(Globals.inventory, 0, Globals.inventory.Length); <=== swapped array to list so im gonne use the next line instead
+        Globals.inventory.Clear();
+
         Globals.inventoryIndex = 0;
 
         if (Globals.currentDay == 1)

@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::pickupsSO
   pickupName: pebble
-  itemCode: 9
+  itemCode: 1
 --- !u!1001 &2389573002294803324
 PrefabInstance:
   m_ObjectHideFlags: 0

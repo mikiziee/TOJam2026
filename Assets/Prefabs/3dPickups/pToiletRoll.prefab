@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::pickupsSO
   pickupName: toiletRoll
-  itemCode: 3
+  itemCode: 7
 --- !u!1001 &327325598641145656
 PrefabInstance:
   m_ObjectHideFlags: 0

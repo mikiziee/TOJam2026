@@ -27,9 +27,8 @@ public class EndTrigger : MonoBehaviour
             }
             else
             {
-                Globals.nextScene = "DayCounterCutscene";
+                Globals.nextScene = "CarScene";
             }
-            Globals.currentDay++;
             animator.Play("FadeIN");
         }
     }

@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::pickupsSO
   pickupName: rubberDuck
-  itemCode: 8
+  itemCode: 2
 --- !u!1001 &9199616772553443014
 PrefabInstance:
   m_ObjectHideFlags: 0
