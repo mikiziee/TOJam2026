@@ -23882,6 +23882,7 @@ MonoBehaviour:
   fullIndicator: {fileID: 1598481315}
   tutorialObj: {fileID: 3720709755114217879}
   otherHand: {fileID: 1427843579}
+  backpackFull: 0
   targetLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -51223,6 +51224,7 @@ MonoBehaviour:
   fullIndicator: {fileID: 0}
   tutorialObj: {fileID: 3720709755114217879}
   otherHand: {fileID: 0}
+  backpackFull: 0
   targetLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -77064,9 +77066,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.00016579032
+    y: 0
     width: 1
-    height: 0.9996684
+    height: 1
   near clip plane: 0.2
   far clip plane: 500
   field of view: 40
@@ -77888,6 +77890,60 @@ MonoBehaviour:
   hand: {fileID: 654455303}
   isFull: 0
   hasSpawned: 0
+  onLidFull:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 654455303}
+        m_TargetAssemblyTypeName: GrabbyHand, Assembly-CSharp
+        m_MethodName: SetBackpackFull
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1427843579}
+        m_TargetAssemblyTypeName: GrabbyHand, Assembly-CSharp
+        m_MethodName: SetBackpackFull
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  onLidNotFull:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 654455303}
+        m_TargetAssemblyTypeName: GrabbyHand, Assembly-CSharp
+        m_MethodName: SetBackpackFull
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1427843579}
+        m_TargetAssemblyTypeName: GrabbyHand, Assembly-CSharp
+        m_MethodName: SetBackpackFull
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

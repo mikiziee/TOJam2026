@@ -26,6 +26,8 @@ public class GrabbyHand : MonoBehaviour
     public GameObject tutorialObj;
 
     public GrabbyHand otherHand;
+    public bool backpackFull = false;
+
 
     [SerializeField] private LayerMask targetLayer;
 
@@ -95,12 +97,14 @@ public class GrabbyHand : MonoBehaviour
     public void Grab()
     {
         pickupsSO pickup = hit.collider.gameObject.GetComponent<pickupsSO>();
-        backpack.SetActive(true);
+        //backpack.SetActive(true);
+        backpack.GetComponent<Canvas>().enabled = true;
         trinketSpawner = backpack.transform.Find("BackpackContainer/TrinketManager").gameObject.GetComponent<TrinketManager>();
 
-        if (trinketSpawner.isFull)
+        if (backpackFull)
         {
-            backpack.SetActive(false);
+            //backpack.SetActive(false);
+            backpack.GetComponent<Canvas>().enabled = false;
             fullIndicator.SetActive(true);
         }
         else
@@ -126,7 +130,8 @@ public class GrabbyHand : MonoBehaviour
         grab.SetActive(false);
         otherHand.neutral.SetActive(true);
         otherHand.grab.SetActive(false);
-        backpack.SetActive(false);
+        //backpack.SetActive(false);
+        backpack.GetComponent<Canvas>().enabled = false;
     }
 
     private void Update()
@@ -158,5 +163,10 @@ public class GrabbyHand : MonoBehaviour
                 isGoat = false;
             }
         }
+    }
+
+    public void SetBackpackFull(bool full)
+    {
+        backpackFull = full;
     }
 }

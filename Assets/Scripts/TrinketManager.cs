@@ -9,7 +9,7 @@ public class TrinketManager : MonoBehaviour
 {
     private GameObject lastSpawnedTrinket;
     [SerializeField] private GameObject[] trinketPrefabs;
-    [SerializeField] private GameObject lid;
+    [SerializeField] public GameObject lid;
     public int currentObj = 0;
     public GameObject trinket;
     public GrabbyHand hand;
@@ -17,6 +17,10 @@ public class TrinketManager : MonoBehaviour
 
     public InputSystem_Actions controls;
     private InputAction left, right;
+
+    
+
+
 
     private void Awake()
     {
@@ -65,10 +69,12 @@ public class TrinketManager : MonoBehaviour
         if (lid.GetComponent<Lid>().GetIsFull())
         {
             isFull = true;
+            Debug.Log("Lid is full!");
         }
         else
         {
             isFull = false;
+            Debug.Log("Lid is not full.");
         }
     }
 
