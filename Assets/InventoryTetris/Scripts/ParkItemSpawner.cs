@@ -14,11 +14,14 @@ public class ParkItemSpawner : MonoBehaviour {
     public event EventHandler OnObjectPlaced;
 
     [SerializeField] private Canvas canvas = null;
-    [SerializeField] public List<PlacedObjectTypeSO> placedObjectTypeSOList = null;
+    [SerializeField] private List<PlacedObjectTypeSO> placedObjectTypeSOList = null;
+    [SerializeField] private GameObject buttonContainer = null;
+    
+    private GameObject[] buttonContainerChildren = null;
 
-    public PlacedObjectTypeSO placedObjectTypeSO;
-    public PlacedObjectTypeSO.Dir dir;
-    public InventoryTetris inventoryTetris;
+    private PlacedObjectTypeSO placedObjectTypeSO;
+    private PlacedObjectTypeSO.Dir dir;
+    private InventoryTetris inventoryTetris;
     private RectTransform canvasRectTransform;
     private RectTransform itemContainer;
 
@@ -26,6 +29,14 @@ public class ParkItemSpawner : MonoBehaviour {
 
     private void Awake() {
         Instance = this;
+
+        //assigning to button group
+        buttonContainerChildren = new GameObject[buttonContainer.transform.childCount];
+        for (int i = 0; i < buttonContainer.transform.childCount; i++)
+        {
+            buttonContainerChildren[i] = buttonContainer.transform.GetChild(i).gameObject;
+            //print(buttonContainerChildren[i].name);
+        }
 
         inventoryTetris = GetComponent<InventoryTetris>();
 
@@ -114,6 +125,7 @@ public class ParkItemSpawner : MonoBehaviour {
             Debug.Log("Try Place Item: " + tryPlaceItem);
             if (tryPlaceItem) {
                 OnObjectPlaced?.Invoke(this, EventArgs.Empty);
+                DeleteClickedButton();
 
             } else {
                 // Cannot build here
@@ -155,7 +167,19 @@ public class ParkItemSpawner : MonoBehaviour {
     public PlacedObjectTypeSO GetPlacedObjectTypeSO() {
         return placedObjectTypeSO;
     }
-
+    
+    public void DeleteClickedButton()
+    {
+        for (int i = 0; i < buttonContainer.transform.childCount; i++)
+        {
+            //checks if the button was clicked and if it was, destroy the button
+            if(buttonContainerChildren[i].GetComponent<ButtonSelfDeleter>().wasClicked)
+            {
+                Debug.Log("Button " + buttonContainerChildren[i].name + " was clicked and will be deleted.");
+                buttonContainerChildren[i].SetActive(false);
+            }
+        }
+    }
 
 
 }

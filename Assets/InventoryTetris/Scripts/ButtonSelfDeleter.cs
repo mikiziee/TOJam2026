@@ -8,35 +8,24 @@ using Unity.VisualScripting;
 
 public class ButtonSelfDeleter : MonoBehaviour
 {
-    [SerializeField] private ParkItemSpawner targetInventoryTetris;
-    private bool canBeDeleted = false;
+    public bool wasClicked { get; set; }
 
-    void Update()
+    private void Awake()
     {
-        if (canBeDeleted)
-        {
-            Debug.Log("update destroying game object...");
-            Destroy(gameObject);
-        }
+        wasClicked = false;
     }
 
-    public void CheckCanBeDeleted()
+    public void OnButtonClicked()
     {
-        Debug.Log("Checking if can be deleted...");
-        Debug.Log(ParkItemSpawner.Instance.inventoryTetris.TryPlaceItem(ParkItemSpawner.Instance.placedObjectTypeSO as ItemTetrisSO, Vector2Int.zero, ParkItemSpawner.Instance.dir));
-        if(ParkItemSpawner.Instance.inventoryTetris.TryPlaceItem(ParkItemSpawner.Instance.placedObjectTypeSO as ItemTetrisSO, Vector2Int.zero, ParkItemSpawner.Instance.dir))
-        {
-            ParkItemSpawner.Instance.inventoryTetris.RemoveItemAt(Vector2Int.zero);
-            canBeDeleted = false;
-            Debug.Log("Can be deleted: " + canBeDeleted);
-        }
-        else
-        {
-            canBeDeleted = true;
-            Debug.Log("Can be deleted: " + canBeDeleted);
-            Debug.Log("Destroying game object...");
-            Destroy(gameObject);
-        }
-        
+        wasClicked = true;
+        print("Button " + gameObject.name + " was clicked.");
+        Invoke("SetWasClickedFalse", 5f);
     }
+
+    public void SetWasClickedFalse()
+    {
+        print("Button " + gameObject.name + " wasClicked reset to false.");
+        wasClicked = false;
+    }
+
 }
