@@ -69,12 +69,10 @@ public class TrinketManager : MonoBehaviour
         if (lid.GetComponent<Lid>().GetIsFull())
         {
             isFull = true;
-            Debug.Log("Lid is full!");
         }
         else
         {
             isFull = false;
-            Debug.Log("Lid is not full.");
         }
     }
 

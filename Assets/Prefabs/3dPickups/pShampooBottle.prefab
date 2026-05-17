@@ -134,4 +134,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::pickupsSO
   pickupName: shampooBottle
-  itemCode: 6
+  itemCode: 4

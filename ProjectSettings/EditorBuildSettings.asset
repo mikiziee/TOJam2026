@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CarScene.unity
     guid: bce57fc958d15a744801939f9192d101
+  - enabled: 1
+    path: Assets/Scenes/EndCutscene.unity
+    guid: 433942ebd7f92264e8d1fe9f1a6be872
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

@@ -134,4 +134,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::pickupsSO
   pickupName: sandwich
-  itemCode: 7
+  itemCode: 3

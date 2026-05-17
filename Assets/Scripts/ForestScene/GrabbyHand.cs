@@ -98,17 +98,18 @@ public class GrabbyHand : MonoBehaviour
     {
         pickupsSO pickup = hit.collider.gameObject.GetComponent<pickupsSO>();
         //backpack.SetActive(true);
-        backpack.GetComponent<Canvas>().enabled = true;
+        backpack.GetComponent<CanvasGroup>().alpha = 1;
         trinketSpawner = backpack.transform.Find("BackpackContainer/TrinketManager").gameObject.GetComponent<TrinketManager>();
 
         if (backpackFull)
         {
             //backpack.SetActive(false);
-            backpack.GetComponent<Canvas>().enabled = false;
+            backpack.GetComponent<CanvasGroup>().alpha = 0;
             fullIndicator.SetActive(true);
         }
         else
         {
+            Debug.Log(pickup + " " + pickup.GetItemCode());
             trinketSpawner.currentObj = pickup.GetItemCode();
             playerController.SetActive(false);
             interact.Disable();
@@ -131,7 +132,8 @@ public class GrabbyHand : MonoBehaviour
         otherHand.neutral.SetActive(true);
         otherHand.grab.SetActive(false);
         //backpack.SetActive(false);
-        backpack.GetComponent<Canvas>().enabled = false;
+        backpack.GetComponent<CanvasGroup>().alpha = 0;
+        
     }
 
     private void Update()

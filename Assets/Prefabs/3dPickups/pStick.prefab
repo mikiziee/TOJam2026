@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::pickupsSO
   pickupName: stick
-  itemCode: 4
+  itemCode: 6
 --- !u!4 &6350105882364037529 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a66d1d9c1793f4f4ba3bc9d13cb51fee, type: 3}
