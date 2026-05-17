@@ -15,6 +15,6 @@ MonoBehaviour:
   nameString: Toiletroll
   prefab: {fileID: 4743965361858176920, guid: 52be366eb939b9740b9d8b9bfa7f0ac8, type: 3}
   visual: {fileID: 2148587555689196983, guid: 78dca92ab8e407d44b767cb5b74f3f1e, type: 3}
-  width: 3
-  height: 2
+  width: 2
+  height: 1
   pointValue: 10

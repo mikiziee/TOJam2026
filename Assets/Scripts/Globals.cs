@@ -14,6 +14,6 @@ public static class Globals
     public static List<int> inventory = new List<int>();
     public static int inventoryIndex = 0;
 
-    public static List<string> carTetrisSaveList =  new List<string>() { "", "", "" };
+    public static List<string> carTetrisSaveList =  new List<string>() { "", "", "", "", "", "" };
 
 }

@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -881341934, guid: 2a3067a806ca8ae4fa19cdb8903beaba, type: 3}
+  m_Sprite: {fileID: -1802068950, guid: fec75d3eb03cb3b4ca7df42bf2749709, type: 3}
   m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -85,7 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2148587555689196983}
   m_Layer: 0
-  m_Name: StickVisual
+  m_Name: MomVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,5 +109,5 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 50, y: 200}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0, y: 0}

@@ -25,6 +25,12 @@ public class InventoryTetrisAssets : MonoBehaviour {
     public ItemTetrisSO toothbrush;
     public ItemTetrisSO waterBottle;
 
+    
+    public ItemTetrisSO mom;
+
+    public ItemTetrisSO dad;
+    public ItemTetrisSO kid;
+
 
     public ItemTetrisSO GetItemTetrisSOFromName(string itemTetrisSOName) {
         foreach (ItemTetrisSO itemTetrisSO in itemTetrisSOArray) {

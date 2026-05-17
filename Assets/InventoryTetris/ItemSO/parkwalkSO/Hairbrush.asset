@@ -15,6 +15,6 @@ MonoBehaviour:
   nameString: Hairbrush
   prefab: {fileID: 4743965361858176920, guid: 955734b9651216f4fbd19f0be01829c2, type: 3}
   visual: {fileID: 2148587555689196983, guid: 91222670673216c4494ab50a50aab06b, type: 3}
-  width: 2
-  height: 3
+  width: 1
+  height: 2
   pointValue: 15

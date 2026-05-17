@@ -15,6 +15,6 @@ MonoBehaviour:
   nameString: WaterBottle
   prefab: {fileID: 4743965361858176920, guid: 0cc1b6bf834df4543b16792f60e8c62f, type: 3}
   visual: {fileID: 2148587555689196983, guid: e1ecb57e205cdef4dba548fa35ada061, type: 3}
-  width: 2
-  height: 6
+  width: 1
+  height: 2
   pointValue: 30

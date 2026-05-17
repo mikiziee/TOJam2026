@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8deb5acad94106d41ae63ce2083c3644, type: 3}
-  m_Name: ShampooBottle
-  m_EditorClassIdentifier: 
-  nameString: ShampooBottle
-  prefab: {fileID: 4743965361858176920, guid: 6813fcf99e5f32c40a4e08e616b675d0, type: 3}
-  visual: {fileID: 2148587555689196983, guid: 33b0077cb7387994882219f18fe0641a, type: 3}
+  m_Name: Kid
+  m_EditorClassIdentifier: Assembly-CSharp::ItemTetrisSO
+  nameString: Kid
+  prefab: {fileID: 4743965361858176920, guid: b1c104861e2f8794abcc5475b4a9120b, type: 3}
+  visual: {fileID: 2148587555689196983, guid: 4b91d2ea0441667429fae7e9d2af3717, type: 3}
   width: 1
-  height: 2
-  pointValue: 20
+  height: 1
+  pointValue: 500
