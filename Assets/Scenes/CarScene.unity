@@ -1144,8 +1144,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 329e2cbf227d0e44b94b89da686b8392, type: 2}
+  m_sharedMaterial: {fileID: -9152354401164407765, guid: 329e2cbf227d0e44b94b89da686b8392, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13131,8 +13131,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: You have to leave some behind, sweetie.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 329e2cbf227d0e44b94b89da686b8392, type: 2}
+  m_sharedMaterial: {fileID: -9152354401164407765, guid: 329e2cbf227d0e44b94b89da686b8392, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -21523,8 +21523,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 370, y: -294}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 394, y: -306}
+  m_SizeDelta: {x: 179.0449, y: 49.0448}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1308306744
 MonoBehaviour:
@@ -21674,9 +21674,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
+  m_Sprite: {fileID: 21300000, guid: a53385248c24e1148903e496d478f013, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -23838,15 +23838,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: e48d5627d91d0a1449b129a18225b267, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
+  m_Type: 2
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 81.36
 --- !u!222 &1431832749
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32512,8 +32512,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 329e2cbf227d0e44b94b89da686b8392, type: 2}
+  m_sharedMaterial: {fileID: -9152354401164407765, guid: 329e2cbf227d0e44b94b89da686b8392, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
