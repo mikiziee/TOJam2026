@@ -4382,6 +4382,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FadeCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3324100327510933168, guid: 1daf9229f64c6ba40a571ddf3f5d0754, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4356580371592953348, guid: 1daf9229f64c6ba40a571ddf3f5d0754, type: 3}
       propertyPath: m_SortingOrder
       value: 101
@@ -24975,9 +24979,6 @@ MonoBehaviour:
   toiletRoll: {fileID: 11400000, guid: e41dc8dbced043d44bcb148543ecda1d, type: 2}
   toothbrush: {fileID: 11400000, guid: 594bdd51a97751d4291dbb55814c8a39, type: 2}
   waterBottle: {fileID: 11400000, guid: 272750117d4d4b640a03c3a1d20626f8, type: 2}
-  mom: {fileID: 11400000, guid: 56fdcef0cdbdfef49a3fce5268f82cc8, type: 2}
-  dad: {fileID: 11400000, guid: 05982d7d3290d6b40ad1811ea4ba1234, type: 2}
-  kid: {fileID: 11400000, guid: 01b9f79345a90e94daf956c69f0a61a5, type: 2}
   gridBackground: {fileID: 21300000, guid: 20b8ba606d245e44daaa029221887240, type: 3}
   gridBackground_2: {fileID: 21300000, guid: 1002273b6e4ac3f49bb60ebe88b4c842, type: 3}
   gridBackground_3: {fileID: 21300000, guid: 4f162c4c46d0e2a4a959e6b54d608b97, type: 3}
@@ -26677,9 +26678,6 @@ MonoBehaviour:
   inventoryTetrisTrunk: {fileID: 1624855258}
   inventoryTetrisFrontMid: {fileID: 1980802936}
   inventoryTetrisFrontRight: {fileID: 444356931}
-  inventoryTetrisFrontLeft: {fileID: 1449484481}
-  inventoryTetrisFrontSeatRight: {fileID: 415024112}
-  inventoryTetrisFrontSeatLeft: {fileID: 791817236}
   bagInventoryTetris: {fileID: 477014274}
   addItemTetrisSaveList:
   - '{"addItemTetrisList":[{"itemTetrisSOName":"Mom","gridPosition":{"x":1,"y":3},"dir":0},{"itemTetrisSOName":"Dad","gridPosition":{"x":3,"y":3},"dir":0},{"itemTetrisSOName":"Kid","gridPosition":{"x":5,"y":3},"dir":0}]} '
@@ -32306,9 +32304,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   dialogueTextComponent: {fileID: 795719204}
   dayTextComponent: {fileID: 89793104}
-  pointsTextComponent: {fileID: 1566954628}
-  GameScript: {fileID: 985983825}
-  pointsToDeduct: 00000000140000004b000000c8000000881300008813000088130000
 --- !u!1 &1168105114
 GameObject:
   m_ObjectHideFlags: 0

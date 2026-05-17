@@ -40290,14 +40290,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemSpawner
   itemPool:
-  - {fileID: 2031885529854863762, guid: 3d18c67cf2ccf424da4b7ad25bb99d1e, type: 3}
-  - {fileID: 3319571295566804576, guid: 9fdbce3519630fc49bf771fe3fd92d6c, type: 3}
-  - {fileID: 3319571295566804576, guid: a5db36d3792136b43bb8195b1bfc5e25, type: 3}
-  - {fileID: 3319571295566804576, guid: 9021950efad79344b854109f5ba79b30, type: 3}
-  - {fileID: 3319571295566804576, guid: 014aa360e9d4a64468f225b219159ed9, type: 3}
-  - {fileID: 3319571295566804576, guid: 54d21841a75b5b248a213c60f2b24987, type: 3}
+  - {fileID: 2022614096925063824, guid: b58c1cd491dfb394095af1973ba5aa23, type: 3}
+  - {fileID: 7530071103875163175, guid: fb1fef8cd407eae4cb0c3ee4ebd77580, type: 3}
+  - {fileID: 727525957727108535, guid: 23c2e3e8135ab2c4881aac6d3e213441, type: 3}
+  - {fileID: 4635363896699014925, guid: 52781bf8e76a48545bbd43f5f36d4567, type: 3}
+  - {fileID: 1751392977282972144, guid: 5508044340529734d8f2f06f2ad63070, type: 3}
+  - {fileID: 7624514357014714942, guid: 5ea836d755b1c2f40a90f2e160e46c46, type: 3}
   - {fileID: 2465798445002347434, guid: b98c9a645b66674478a077318d90e3f6, type: 3}
-  numberOfSpawns: 4
+  numberOfSpawns: 6
   childIndex: []
   spawnOnce: 1
 --- !u!1001 &1125541332
@@ -77119,9 +77119,9 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.027600527
     y: 0
-    width: 1
+    width: 0.94479895
     height: 1
   near clip plane: 0.2
   far clip plane: 500

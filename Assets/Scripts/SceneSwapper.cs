@@ -18,6 +18,11 @@ public class SceneSwapper : MonoBehaviour
     public void SetNextScene(string sceneName)
     {
         Globals.nextScene = sceneName;
+
+        if (sceneName == "DayCounterCutscene" && Globals.currentDay == 6)
+        {
+            Globals.nextScene = "EndCutscene";
+        }
     }
 
     public void ChangeScene()
