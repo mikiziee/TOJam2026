@@ -15560,7 +15560,7 @@ MonoBehaviour:
   inventoryTetrisFrontRight: {fileID: 444356931}
   bagInventoryTetris: {fileID: 477014274}
   addItemTetrisSaveList:
-  - '{"addItemTetrisList":[{"itemTetrisSOName":"Stick","gridPosition":{"x":1,"y":1},"dir":0},{"itemTetrisSOName":"Pebble","gridPosition":{"x":3,"y":3},"dir":0}]}'
+  - '{"addItemTetrisList":[{"itemTetrisSOName":"Pebble","gridPosition":{"x":1,"y":1},"dir":0},{"itemTetrisSOName":"Snail","gridPosition":{"x":3,"y":3},"dir":0}]}'
 --- !u!4 &985983826
 Transform:
   m_ObjectHideFlags: 0

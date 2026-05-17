@@ -17,3 +17,4 @@ MonoBehaviour:
   visual: {fileID: 2148587555689196983, guid: 78dca92ab8e407d44b767cb5b74f3f1e, type: 3}
   width: 3
   height: 2
+  pointValue: 10

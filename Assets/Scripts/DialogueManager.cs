@@ -5,6 +5,12 @@ public class DialogueManager : MonoBehaviour
 {
     [SerializeField] TMP_Text dialogueTextComponent;
     [SerializeField] TMP_Text dayTextComponent;
+    [SerializeField] TMP_Text pointsTextComponent;
+    [SerializeField] InventoryTetrisTesting GameScript;
+
+    private string[] penaltyItemNames;
+    [SerializeField] private int[] pointsToDeduct;
+
 
     void Awake()
     {
@@ -12,24 +18,41 @@ public class DialogueManager : MonoBehaviour
         Cursor.visible = true;
     }
     void Start()
-    
     {
         SetDayText();
+
         switch (Globals.currentDay)
         {
             case 1:
-                SetText("You have to leave some behind, sweetie.");
+                SetText("Pack your things into the car, honey! Who do you think should drive today? (drag objects into available yellow spaces)");
+                penaltyItemNames = new string[] { "None" };
                 break;
             case 2:
-                SetText("Welcome back! Let's continue our adventure.");
+                SetText("I think your father should drive us home, I've had a really hard day. And don't bring any garbage home with us.");
+                penaltyItemNames = new string[] { "Toiletroll" };
                 break;
             case 3:
-                SetText("Great to see you again! The story unfolds...");
+                SetText("We don't need any more pebbles in the house, they're pointless. Leave them in the parking lot.");
+                penaltyItemNames = new string[] { "Toiletroll", "Pebble" };
+                break;
+            case 4:
+                SetText("Your shoes are all dirty, I don't want the mud in my car. I'm leaving them outside. Whatever you have in your bag, its not coming home if it isnt cute.");
+                penaltyItemNames = new string[] {  "Toiletroll", "Pebble", "Hairbrush", "Sandwich", "ShampooBottle","Stick", "Toothbrush", "WaterBottle" };
+                break;
+            case 5:
+                SetText("You're all dirty from running around in the woods, and you keep bringing garbage home. You're not allowed to get in the car.");
+                penaltyItemNames = new string[] {   "Toiletroll", "Pebble", "Hairbrush", "Sandwich", "ShampooBottle","Stick", "Toothbrush", "WaterBottle", "Snail", "RubberDuck"  };
                 break;
             default:
-                SetText("Welcome to the game!");
+                SetText("Pack your things into the car, honey! Who do you think should drive today? (drag objects into available yellow spaces, and passengers into their cyan-coloured seats)");
+                penaltyItemNames = new string[] { "None" };
                 break;
         }
+    }
+
+    void Update()
+    {
+        pointsTextComponent.text = "Points: " +  GameScript.TotalPoints(penaltyItemNames, pointsToDeduct[Globals.currentDay - 1]).ToString();
     }
 
     private void SetText(string text)
