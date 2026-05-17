@@ -24,7 +24,7 @@ public class DialogueManager : MonoBehaviour
         switch (Globals.currentDay)
         {
             case 1:
-                SetText("Pack your things into the car, honey! Who do you think should drive today? (drag objects into available yellow spaces)");
+                SetText("Pack your things into the car, honey! Who do you think should drive today? (drag objects into available yellow spaces, and passengers into their cyan-coloured seats)");
                 penaltyItemNames = new string[] { "None" };
                 break;
             case 2:
@@ -57,8 +57,9 @@ public class DialogueManager : MonoBehaviour
 
     public void SetPointsGlobal()
     {
-        Globals.points = GameScript.TotalPoints(penaltyItemNames, pointsToDeduct[Globals.currentDay - 1]);
+        Globals.points += GameScript.TotalPoints(penaltyItemNames, pointsToDeduct[Globals.currentDay - 1]);
     }
+
 
     private void SetText(string text)
     {
