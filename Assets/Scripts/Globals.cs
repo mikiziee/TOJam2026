@@ -15,5 +15,6 @@ public static class Globals
     public static int inventoryIndex = 0;
 
     public static List<string> carTetrisSaveList =  new List<string>() { "", "", "", "", "", "" };
+    public static float points = 0;
 
 }

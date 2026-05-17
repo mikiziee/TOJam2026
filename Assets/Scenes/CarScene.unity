@@ -10882,7 +10882,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 363, y: 191}
+  m_AnchoredPosition: {x: 357, y: 176.66667}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &415024111
@@ -10923,7 +10923,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridWidth: 1
   gridHeight: 1
-  cellSize: 50
+  cellSize: 75
 --- !u!1 &415159333
 GameObject:
   m_ObjectHideFlags: 0
@@ -17984,7 +17984,7 @@ MonoBehaviour:
   m_ChildAlignment: 6
   m_StartCorner: 2
   m_StartAxis: 0
-  m_CellSize: {x: 50, y: 50}
+  m_CellSize: {x: 75, y: 75}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -20020,7 +20020,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &757743533
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21138,7 +21138,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 360, y: -38}
+  m_AnchoredPosition: {x: 354, y: -38}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &791817235
@@ -21179,7 +21179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridWidth: 1
   gridHeight: 1
-  cellSize: 50
+  cellSize: 75
 --- !u!1 &793383392
 GameObject:
   m_ObjectHideFlags: 0
@@ -26447,9 +26447,12 @@ MonoBehaviour:
   inventoryTetrisTrunk: {fileID: 1624855258}
   inventoryTetrisFrontMid: {fileID: 1980802936}
   inventoryTetrisFrontRight: {fileID: 444356931}
+  inventoryTetrisFrontLeft: {fileID: 1449484481}
+  inventoryTetrisFrontSeatRight: {fileID: 415024112}
+  inventoryTetrisFrontSeatLeft: {fileID: 791817236}
   bagInventoryTetris: {fileID: 477014274}
   addItemTetrisSaveList:
-  - '{"addItemTetrisList":[{"itemTetrisSOName":"Mom","gridPosition":{"x":1,"y":3},"dir":0},{"itemTetrisSOName":"Dad","gridPosition":{"x":3,"y":3},"dir":0},{"itemTetrisSOName":"Kid","gridPosition":{"x":5,"y":3},"dir":0}]}'
+  - '{"addItemTetrisList":[{"itemTetrisSOName":"Mom","gridPosition":{"x":1,"y":3},"dir":0},{"itemTetrisSOName":"Dad","gridPosition":{"x":3,"y":3},"dir":0},{"itemTetrisSOName":"Kid","gridPosition":{"x":5,"y":3},"dir":0}]} '
 --- !u!4 &985983826
 Transform:
   m_ObjectHideFlags: 0
@@ -30656,7 +30659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.81871617, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.8039216, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -33353,7 +33356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.81871617, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.8033794, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -34594,7 +34597,7 @@ MonoBehaviour:
   m_ChildAlignment: 6
   m_StartCorner: 2
   m_StartAxis: 0
-  m_CellSize: {x: 50, y: 50}
+  m_CellSize: {x: 75, y: 75}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -35717,6 +35720,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1163129783}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: SetPointsGlobal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 985983825}
         m_TargetAssemblyTypeName: InventoryTetrisTesting, Assembly-CSharp
         m_MethodName: SaveCarInventory
@@ -40599,7 +40614,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 170, y: 190}
+  m_AnchoredPosition: {x: 164, y: 190}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1449484480
@@ -40640,7 +40655,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridWidth: 1
   gridHeight: 1
-  cellSize: 50
+  cellSize: 75
 --- !u!1 &1450287010
 GameObject:
   m_ObjectHideFlags: 0
@@ -41050,6 +41065,9 @@ MonoBehaviour:
   - {fileID: 1980802936}
   - {fileID: 444356931}
   - {fileID: 477014274}
+  - {fileID: 1449484481}
+  - {fileID: 791817236}
+  - {fileID: 415024112}
 --- !u!4 &1475726570
 Transform:
   m_ObjectHideFlags: 0
@@ -54838,7 +54856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.81871617, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.8039216, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -57943,7 +57961,7 @@ MonoBehaviour:
   m_ChildAlignment: 6
   m_StartCorner: 2
   m_StartAxis: 0
-  m_CellSize: {x: 50, y: 50}
+  m_CellSize: {x: 75, y: 75}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2

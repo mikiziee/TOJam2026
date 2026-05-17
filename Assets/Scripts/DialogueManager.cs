@@ -55,6 +55,11 @@ public class DialogueManager : MonoBehaviour
         pointsTextComponent.text = "Points: " +  GameScript.TotalPoints(penaltyItemNames, pointsToDeduct[Globals.currentDay - 1]).ToString();
     }
 
+    public void SetPointsGlobal()
+    {
+        Globals.points = GameScript.TotalPoints(penaltyItemNames, pointsToDeduct[Globals.currentDay - 1]);
+    }
+
     private void SetText(string text)
     {
         dialogueTextComponent.text = text;
