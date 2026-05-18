@@ -201,4 +201,46 @@ public class InventoryTetris : MonoBehaviour {
         }
     }
 
+    public float ReturnPoints()
+    {
+        float points = 0;
+
+        List<PlacedObject> placedObjectList = new List<PlacedObject>();
+        for (int x = 0; x < grid.GetWidth(); x++) {
+            for (int y = 0; y < grid.GetHeight(); y++) {
+                if (grid.GetGridObject(x, y).HasPlacedObject()) {
+                    placedObjectList.Remove(grid.GetGridObject(x, y).GetPlacedObject());
+                    placedObjectList.Add(grid.GetGridObject(x, y).GetPlacedObject());
+                    points = points + grid.GetGridObject(x, y).GetPlacedObject().GetPlacedObjectTypeSO().GetPointValueSolved();
+                    //Debug.Log(points);
+                }
+            }
+        }
+
+        return points;
+    }
+
+    public bool isPenaltyItemPlaced(string[] penaltyItemNames) {
+
+        List<PlacedObject> placedObjectList = new List<PlacedObject>();
+        for (int x = 0; x < grid.GetWidth(); x++) {
+            for (int y = 0; y < grid.GetHeight(); y++) {
+                if (grid.GetGridObject(x, y).HasPlacedObject()) {
+                    placedObjectList.Remove(grid.GetGridObject(x, y).GetPlacedObject());
+                    placedObjectList.Add(grid.GetGridObject(x, y).GetPlacedObject());
+                    string placedItemName = grid.GetGridObject(x, y).GetPlacedObject().GetPlacedObjectTypeSO().nameString;
+                   
+                   //cycle trough grid for each item in penaltyItemNames Array, if any of the items in the grid matches any of the penalty item names, return true
+                    foreach(string penaltyItemName in penaltyItemNames)
+                    {
+                        if (placedItemName.Equals(penaltyItemName, StringComparison.OrdinalIgnoreCase)) {
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
 }

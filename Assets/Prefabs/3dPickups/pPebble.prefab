@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::pickupsSO
   pickupName: pebble
-  itemCode: 9
+  itemCode: 1
 --- !u!4 &2784296049434975383 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b9e460f314ed18b4a8e45faa2861aa61, type: 3}

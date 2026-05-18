@@ -23880,8 +23880,9 @@ MonoBehaviour:
   trinketSpawner: {fileID: 9184848384325594678}
   playerController: {fileID: 1480933369331797301}
   fullIndicator: {fileID: 1598481315}
-  tutorialObj: {fileID: 3720709755114217879}
+  tutorialObj: {fileID: 3720709756329332828, guid: c49219b24122c984ba65eaaf9083b138, type: 3}
   otherHand: {fileID: 1427843579}
+  backpackFull: 0
   targetLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -40296,7 +40297,7 @@ MonoBehaviour:
   - {fileID: 1751392977282972144, guid: 5508044340529734d8f2f06f2ad63070, type: 3}
   - {fileID: 7624514357014714942, guid: 5ea836d755b1c2f40a90f2e160e46c46, type: 3}
   - {fileID: 2465798445002347434, guid: b98c9a645b66674478a077318d90e3f6, type: 3}
-  numberOfSpawns: 4
+  numberOfSpawns: 6
   childIndex: []
   spawnOnce: 1
 --- !u!1001 &1125541332
@@ -51223,6 +51224,7 @@ MonoBehaviour:
   fullIndicator: {fileID: 0}
   tutorialObj: {fileID: 3720709755114217879}
   otherHand: {fileID: 0}
+  backpackFull: 0
   targetLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -74928,7 +74930,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7841720571548079544}
-  m_BodyType: 1
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -75587,7 +75589,7 @@ Transform:
   m_GameObject: {fileID: 1538148120974163421}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.06083, y: 6.63, z: 0.30927002}
+  m_LocalPosition: {x: 3.06083, y: 6.9, z: 0.30927002}
   m_LocalScale: {x: 8.851834, y: 2.045151, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -75601,7 +75603,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7030381920230229142}
-  m_BodyType: 1
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -75649,6 +75651,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a3b83cc45a7a894897c0f27db95c4d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Lid
+  onLidFull:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 654455303}
+        m_TargetAssemblyTypeName: GrabbyHand, Assembly-CSharp
+        m_MethodName: SetBackpackFull
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1427843579}
+        m_TargetAssemblyTypeName: GrabbyHand, Assembly-CSharp
+        m_MethodName: SetBackpackFull
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  onLidNotFull:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 654455303}
+        m_TargetAssemblyTypeName: GrabbyHand, Assembly-CSharp
+        m_MethodName: SetBackpackFull
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1427843579}
+        m_TargetAssemblyTypeName: GrabbyHand, Assembly-CSharp
+        m_MethodName: SetBackpackFull
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &2317448253107485309
 RectTransform:
   m_ObjectHideFlags: 0
@@ -76055,7 +76111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::pickupsSO
   pickupName: stick
-  itemCode: 4
+  itemCode: 6
 --- !u!50 &3619636361563964187
 Rigidbody2D:
   serializedVersion: 5
@@ -76064,7 +76120,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8212470768008140095}
-  m_BodyType: 1
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -76529,7 +76585,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1538148120974163421}
-  m_BodyType: 1
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -76858,7 +76914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::pickupsSO
   pickupName: stick
-  itemCode: 4
+  itemCode: 6
 --- !u!4 &5650038452789726271
 Transform:
   m_ObjectHideFlags: 0
@@ -77063,10 +77119,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0.00016579032
-    width: 1
-    height: 0.9996684
+    x: 0.027600527
+    y: 0
+    width: 0.94479895
+    height: 1
   near clip plane: 0.2
   far clip plane: 500
   field of view: 40
@@ -77121,13 +77177,26 @@ GameObject:
   - component: {fileID: 4893980530377749257}
   - component: {fileID: 3498831135338189182}
   - component: {fileID: 1538870197525805194}
+  - component: {fileID: 6327779901633157282}
   m_Layer: 5
   m_Name: BagCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
+--- !u!225 &6327779901633157282
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6327779901633157281}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &6464817906925915998
 GameObject:
   m_ObjectHideFlags: 0
@@ -77251,7 +77320,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 512763075823570032}
-  m_BodyType: 1
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -77297,7 +77366,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5355962879221941038}
-  m_BodyType: 1
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -77873,15 +77942,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::trinketManager
   trinketPrefabs:
   - {fileID: 2031885529854863762, guid: 3d18c67cf2ccf424da4b7ad25bb99d1e, type: 3}
-  - {fileID: 3319571295566804576, guid: 1c0c4843703b82e4e9b667e527861c03, type: 3}
-  - {fileID: 3319571295566804576, guid: 54d21841a75b5b248a213c60f2b24987, type: 3}
-  - {fileID: 3319571295566804576, guid: 014aa360e9d4a64468f225b219159ed9, type: 3}
-  - {fileID: 3319571295566804576, guid: 92b38664557122f4ca06a15930fad1fc, type: 3}
-  - {fileID: 3319571295566804576, guid: ceaa960079cc3554ba5bf58dd91a7980, type: 3}
-  - {fileID: 3319571295566804576, guid: 9021950efad79344b854109f5ba79b30, type: 3}
-  - {fileID: 3319571295566804576, guid: a5db36d3792136b43bb8195b1bfc5e25, type: 3}
-  - {fileID: 3319571295566804576, guid: 9fdbce3519630fc49bf771fe3fd92d6c, type: 3}
   - {fileID: 3319571295566804576, guid: 5abe7f65b331fd54f881b643a77928ca, type: 3}
+  - {fileID: 3319571295566804576, guid: 9fdbce3519630fc49bf771fe3fd92d6c, type: 3}
+  - {fileID: 3319571295566804576, guid: a5db36d3792136b43bb8195b1bfc5e25, type: 3}
+  - {fileID: 3319571295566804576, guid: 9021950efad79344b854109f5ba79b30, type: 3}
+  - {fileID: 3319571295566804576, guid: ceaa960079cc3554ba5bf58dd91a7980, type: 3}
+  - {fileID: 3319571295566804576, guid: 92b38664557122f4ca06a15930fad1fc, type: 3}
+  - {fileID: 3319571295566804576, guid: 014aa360e9d4a64468f225b219159ed9, type: 3}
+  - {fileID: 3319571295566804576, guid: 54d21841a75b5b248a213c60f2b24987, type: 3}
+  - {fileID: 3319571295566804576, guid: 1c0c4843703b82e4e9b667e527861c03, type: 3}
   lid: {fileID: 1538148120974163421}
   currentObj: 0
   trinket: {fileID: 0}

@@ -21,7 +21,7 @@ public class EndTrigger : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("Player"))
         {
-            if (Globals.currentDay == 5)
+            if (Globals.currentDay > 5)
             {
                 Globals.nextScene = "EndCutscene";
             }

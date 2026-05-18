@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::pickupsSO
   pickupName: toothBrush
-  itemCode: 2
+  itemCode: 8
 --- !u!4 &6468914211831218713 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: de012086fda5baa4fa3e04e62aabe2f7, type: 3}

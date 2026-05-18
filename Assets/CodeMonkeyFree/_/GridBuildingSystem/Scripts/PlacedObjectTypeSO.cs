@@ -53,6 +53,11 @@ public class PlacedObjectTypeSO : ScriptableObject {
     public Transform visual;
     public int width;
     public int height;
+    public int pointValue;
+    
+    public int GetPointValueSolved() {
+        return pointValue/ (width * height);
+    }
 
 
     public int GetRotationAngle(Dir dir) {

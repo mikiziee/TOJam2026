@@ -15,5 +15,6 @@ MonoBehaviour:
   nameString: Sandwich
   prefab: {fileID: 4743965361858176920, guid: b88a1aa211410a142a0f1f9ff991ca30, type: 3}
   visual: {fileID: 2148587555689196983, guid: ca790968f2e249a4eb7418b86a13be2f, type: 3}
-  width: 4
-  height: 4
+  width: 2
+  height: 2
+  pointValue: 300

@@ -10,6 +10,9 @@ public class InventoryTetrisTesting : MonoBehaviour {
     [SerializeField] private InventoryTetris inventoryTetrisTrunk;
     [SerializeField] private InventoryTetris inventoryTetrisFrontMid;
     [SerializeField] private InventoryTetris inventoryTetrisFrontRight;
+    [SerializeField] private InventoryTetris inventoryTetrisFrontLeft;
+    [SerializeField] private InventoryTetris inventoryTetrisFrontSeatRight;
+    [SerializeField] private InventoryTetris inventoryTetrisFrontSeatLeft;
     [SerializeField] private InventoryTetris bagInventoryTetris;
     [SerializeField] private List<string> addItemTetrisSaveList;
 
@@ -41,12 +44,15 @@ public class InventoryTetrisTesting : MonoBehaviour {
     //     }
 
         if (Keyboard.current.pKey.wasPressedThisFrame) {
-            Globals.carTetrisSaveList[0] = inventoryTetrisTrunk.Save();
-            Debug.Log("Saved Car Trunk Inventory: " + Globals.carTetrisSaveList[0]);
-            Globals.carTetrisSaveList[1] = inventoryTetrisFrontMid.Save();
-            Debug.Log("Saved Car Front Mid Inventory: " + Globals.carTetrisSaveList[1]);  
-            Globals.carTetrisSaveList[2] = inventoryTetrisFrontRight.Save();
-            Debug.Log("Saved Car Front Right Inventory: " + Globals.carTetrisSaveList[2]);
+            // Globals.carTetrisSaveList[0] = inventoryTetrisTrunk.Save();
+            // Debug.Log("Saved Car Trunk Inventory: " + Globals.carTetrisSaveList[0]);
+            // Globals.carTetrisSaveList[1] = inventoryTetrisFrontMid.Save();
+            // Debug.Log("Saved Car Front Mid Inventory: " + Globals.carTetrisSaveList[1]);  
+            // Globals.carTetrisSaveList[2] = inventoryTetrisFrontRight.Save();
+            // Debug.Log("Saved Car Front Right Inventory: " + Globals.carTetrisSaveList[2]);
+
+            float points = inventoryTetrisTrunk.ReturnPoints() + inventoryTetrisFrontMid.ReturnPoints() +inventoryTetrisFrontRight.ReturnPoints() + inventoryTetrisFrontLeft.ReturnPoints() + inventoryTetrisFrontSeatRight.ReturnPoints() + inventoryTetrisFrontSeatLeft.ReturnPoints();
+            Debug.Log("points: " + points);
         }
     }
 
@@ -56,7 +62,16 @@ public class InventoryTetrisTesting : MonoBehaviour {
         Globals.carTetrisSaveList[1] = inventoryTetrisFrontMid.Save();
         Debug.Log("Saved Car Front Mid Inventory: " + Globals.carTetrisSaveList[1]);  
         Globals.carTetrisSaveList[2] = inventoryTetrisFrontRight.Save();
-        Debug.Log("Saved Car Front Right Inventory: " + Globals.carTetrisSaveList[2]);
     }
 
+    public float TotalPoints(string[] penaltyItemNames, int pointsToDeduct) {
+        float points = inventoryTetrisTrunk.ReturnPoints() + inventoryTetrisFrontMid.ReturnPoints() +inventoryTetrisFrontRight.ReturnPoints() + inventoryTetrisFrontLeft.ReturnPoints() + inventoryTetrisFrontSeatRight.ReturnPoints() + inventoryTetrisFrontSeatLeft.ReturnPoints();
+
+        if(inventoryTetrisTrunk.isPenaltyItemPlaced(penaltyItemNames) || inventoryTetrisFrontMid.isPenaltyItemPlaced(penaltyItemNames) || inventoryTetrisFrontRight.isPenaltyItemPlaced(penaltyItemNames) || inventoryTetrisFrontLeft.isPenaltyItemPlaced(penaltyItemNames) || inventoryTetrisFrontSeatRight.isPenaltyItemPlaced(penaltyItemNames) || inventoryTetrisFrontSeatLeft.isPenaltyItemPlaced(penaltyItemNames))
+        {
+            points = points - pointsToDeduct;
+        }
+        //Debug.Log("points: " + points);
+        return points;
+    }
 }
