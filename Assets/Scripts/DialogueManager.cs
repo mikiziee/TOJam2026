@@ -9,7 +9,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] InventoryTetrisTesting GameScript;
 
     private string[] penaltyItemNames;
-    [SerializeField] private int[] pointsToDeduct;
+    [SerializeField] private int[] pointsToDeduct = new int[] { 0, 20, 75, 200, 5000 };
 
 
     void Awake()
@@ -24,7 +24,7 @@ public class DialogueManager : MonoBehaviour
         switch (Globals.currentDay)
         {
             case 1:
-                SetText("Pack your things into the car, honey! Who do you think should drive today? (drag objects into available yellow spaces, and passengers into their cyan-coloured seats)");
+                SetText("Pack your things into the car, honey! Who do you think should drive today? (click on objects to bring them to your grid. drag into available yellow spaces, and passengers into blue seats)");
                 penaltyItemNames = new string[] { "None" };
                 break;
             case 2:
@@ -44,7 +44,7 @@ public class DialogueManager : MonoBehaviour
                 penaltyItemNames = new string[] {   "Toiletroll", "Pebble", "Hairbrush", "Sandwich", "ShampooBottle","Stick", "Toothbrush", "WaterBottle", "Snail", "RubberDuck"  };
                 break;
             default:
-                SetText("Pack your things into the car, honey! Who do you think should drive today? (drag objects into available yellow spaces, and passengers into their cyan-coloured seats)");
+                SetText("Pack your things into the car, honey! Who do you think should drive today? (click on objects to bring them to your grid. drag into available yellow spaces, and passengers into blue seats)");
                 penaltyItemNames = new string[] { "None" };
                 break;
         }
@@ -52,12 +52,12 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        pointsTextComponent.text = "Points: " +  GameScript.TotalPoints(penaltyItemNames, pointsToDeduct[Globals.currentDay - 1]).ToString();
+        pointsTextComponent.text = "Points: " +  GameScript.TotalPoints().ToString();
     }
 
     public void SetPointsGlobal()
     {
-        Globals.points += GameScript.TotalPoints(penaltyItemNames, pointsToDeduct[Globals.currentDay - 1]);
+        Globals.points += GameScript.TotalPoints();
     }
 
 

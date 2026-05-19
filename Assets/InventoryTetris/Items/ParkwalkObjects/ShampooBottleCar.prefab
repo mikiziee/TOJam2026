@@ -63,6 +63,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c999629e3077d4fa04ae8834c49dc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemAddable: 0000000000000000000000000100000001000000
+  isHuman: 0
 --- !u!225 &571692785000323619
 CanvasGroup:
   m_ObjectHideFlags: 0

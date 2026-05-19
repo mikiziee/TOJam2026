@@ -17,6 +17,9 @@ using UnityEngine.EventSystems;
 
 public class InventoryTetrisDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler {
 
+    [SerializeField] private int[] itemAddable = new int[] {0, 0, 0, 0, 0};
+    [SerializeField] private bool isHuman = false;
+
     private Canvas canvas;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
@@ -50,11 +53,19 @@ public class InventoryTetrisDragDrop : MonoBehaviour, IPointerDownHandler, IBegi
     }
 
     public void OnEndDrag(PointerEventData eventData) {
+        bool isPlaceable = true;
+
+        if (this.itemAddable[Globals.currentDay-1] == 1){
+            isPlaceable = false;
+        }
+
+
+        //Debug.Log(this.itemAddable[Globals.currentDay].ToString());
         //Debug.Log("OnEndDrag");
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
 
-        InventoryTetrisDragDropSystem.Instance.StoppedDragging(inventoryTetris, placedObject);
+        InventoryTetrisDragDropSystem.Instance.StoppedDragging(inventoryTetris, placedObject, isPlaceable, this.isHuman);
     }
 
     public void OnPointerDown(PointerEventData eventData) {

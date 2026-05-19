@@ -80,7 +80,7 @@ public class InventoryTetrisDragDropSystem : MonoBehaviour {
         mouseDragAnchoredPositionOffset += new Vector2(rotationOffset.x, rotationOffset.y) * draggingInventoryTetris.GetGrid().GetCellSize();
     }
 
-    public void StoppedDragging(InventoryTetris fromInventoryTetris, PlacedObject placedObject) {
+    public void StoppedDragging(InventoryTetris fromInventoryTetris, PlacedObject placedObject, bool isPlaceable, bool isHuman) {
         draggingInventoryTetris = null;
         draggingPlacedObject = null;
 
@@ -98,7 +98,9 @@ public class InventoryTetrisDragDropSystem : MonoBehaviour {
             Vector2Int placedObjectOrigin = inventoryTetris.GetGridPosition(anchoredPosition);
             placedObjectOrigin = placedObjectOrigin - mouseDragGridPositionOffset;
 
-            if (inventoryTetris.IsValidGridPosition(placedObjectOrigin)) {
+            if ((inventoryTetris.IsValidGridPosition(placedObjectOrigin) && (isHuman == false)) && (isPlaceable == true) || //only place if in valid position + placeable that day
+            (inventoryTetris.IsValidGridPosition(placedObjectOrigin) && (inventoryTetris.name == "InventoryTetrisFrontLeft" || inventoryTetris.name == "InventoryTetrisFrontRight" || inventoryTetris.name == "InventoryTetrisMidLeft") && (isHuman == true) && (isPlaceable == true)) ||
+            (inventoryTetris.IsValidGridPosition(placedObjectOrigin) && inventoryTetris.name == "InventoryTetrisSecond")) {
                 toInventoryTetris = inventoryTetris;
                 break;
             }

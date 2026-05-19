@@ -64,13 +64,13 @@ public class InventoryTetrisTesting : MonoBehaviour {
         Globals.carTetrisSaveList[2] = inventoryTetrisFrontRight.Save();
     }
 
-    public float TotalPoints(string[] penaltyItemNames, int pointsToDeduct) {
+    public float TotalPoints(){//(string[] penaltyItemNames, int pointsToDeduct) {
         float points = inventoryTetrisTrunk.ReturnPoints() + inventoryTetrisFrontMid.ReturnPoints() +inventoryTetrisFrontRight.ReturnPoints() + inventoryTetrisFrontLeft.ReturnPoints() + inventoryTetrisFrontSeatRight.ReturnPoints() + inventoryTetrisFrontSeatLeft.ReturnPoints();
 
-        if(inventoryTetrisTrunk.isPenaltyItemPlaced(penaltyItemNames) || inventoryTetrisFrontMid.isPenaltyItemPlaced(penaltyItemNames) || inventoryTetrisFrontRight.isPenaltyItemPlaced(penaltyItemNames) || inventoryTetrisFrontLeft.isPenaltyItemPlaced(penaltyItemNames) || inventoryTetrisFrontSeatRight.isPenaltyItemPlaced(penaltyItemNames) || inventoryTetrisFrontSeatLeft.isPenaltyItemPlaced(penaltyItemNames))
-        {
-            points = points - pointsToDeduct;
-        }
+        //if(inventoryTetrisTrunk.isPenaltyItemPlaced(penaltyItemNames) || inventoryTetrisFrontMid.isPenaltyItemPlaced(penaltyItemNames) || inventoryTetrisFrontRight.isPenaltyItemPlaced(penaltyItemNames) || inventoryTetrisFrontLeft.isPenaltyItemPlaced(penaltyItemNames) || inventoryTetrisFrontSeatRight.isPenaltyItemPlaced(penaltyItemNames) || inventoryTetrisFrontSeatLeft.isPenaltyItemPlaced(penaltyItemNames))
+        //{
+        //    points = points - pointsToDeduct;
+        //}
         //Debug.Log("points: " + points);
         return points;
     }
