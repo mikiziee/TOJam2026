@@ -10,10 +10,12 @@ public class DialogueManager : MonoBehaviour
 
     private string[] penaltyItemNames;
     [SerializeField] private int[] pointsToDeduct = new int[] { 0, 20, 75, 200, 5000 };
+    AudioManager audioManager;
 
 
     void Awake()
     {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
@@ -58,6 +60,12 @@ public class DialogueManager : MonoBehaviour
     public void SetPointsGlobal()
     {
         Globals.points += GameScript.TotalPoints();
+    }
+
+    public void finishButtonSFX()
+    {
+        //audioManager.Play2DSFX(audioManager.buttonFinished);
+        return;
     }
 
 

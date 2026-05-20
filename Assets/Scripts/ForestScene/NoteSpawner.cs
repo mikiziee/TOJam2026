@@ -7,15 +7,19 @@ public class NoteSpawner : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        for (int i = 0; i < Globals.currentDay; i++)
-        {
-            notes[i].gameObject.SetActive(true);
+        //audioSource = GetComponent<AudioSource>();
 
-            if (i + 1 != Globals.currentDay)
-            {
+        for (int i = 0; i < 5; i++)
+        {
+            if (i == Globals.currentDay-1){
+                notes[i].gameObject.SetActive(true);
+                notes[i].audio.GetComponent<AudioSource>().mute = false;
+            } else {
                 notes[i].text.SetActive(false);
                 notes[i].paper.SetActive(false);
+                notes[i].audio.GetComponent<AudioSource>().mute = true;
             }
+
         }
     }
 }

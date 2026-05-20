@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class TrinketManager : MonoBehaviour
 {
+    AudioManager audioManager;
     private GameObject lastSpawnedTrinket;
     [SerializeField] private GameObject[] trinketPrefabs;
     [SerializeField] public GameObject lid;
@@ -25,6 +26,7 @@ public class TrinketManager : MonoBehaviour
     private void Awake()
     {
         controls = new InputSystem_Actions();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     private void OnEnable()
@@ -45,18 +47,19 @@ public class TrinketManager : MonoBehaviour
     {
         if (Keyboard.current.spaceKey.wasPressedThisFrame && !hasSpawned)
         {
+            audioManager.Play2DSFX(audioManager.dropItem);
             SpawnRandomTrinket();
             hasSpawned = true;
         }
 
         if (left.IsPressed() && transform.localPosition.x >= -2)
         {
-            transform.localPosition = transform.localPosition - new Vector3(0.01f, 0, 0);
+            transform.localPosition = transform.localPosition - new Vector3(0.1f, 0, 0);
         }
 
         if (right.IsPressed() && transform.localPosition.x <= 2)
         {
-            transform.localPosition = transform.localPosition + new Vector3(0.01f, 0, 0);
+            transform.localPosition = transform.localPosition + new Vector3(0.1f, 0, 0);
         }
 
         if (trinket != null && trinket.GetComponent<Rigidbody2D>().IsSleeping())

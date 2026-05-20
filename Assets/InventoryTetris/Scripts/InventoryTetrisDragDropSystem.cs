@@ -17,10 +17,12 @@ public class InventoryTetrisDragDropSystem : MonoBehaviour {
     private Vector2Int mouseDragGridPositionOffset;
     private Vector2 mouseDragAnchoredPositionOffset;
     private PlacedObjectTypeSO.Dir dir;
+    AudioManager audioManager;
 
 
     private void Awake() {
         Instance = this;
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     private void Start() {
@@ -101,6 +103,9 @@ public class InventoryTetrisDragDropSystem : MonoBehaviour {
             if ((inventoryTetris.IsValidGridPosition(placedObjectOrigin) && (isHuman == false)) && (isPlaceable == true) || //only place if in valid position + placeable that day
             (inventoryTetris.IsValidGridPosition(placedObjectOrigin) && (inventoryTetris.name == "InventoryTetrisFrontLeft" || inventoryTetris.name == "InventoryTetrisFrontRight" || inventoryTetris.name == "InventoryTetrisMidLeft") && (isHuman == true) && (isPlaceable == true)) ||
             (inventoryTetris.IsValidGridPosition(placedObjectOrigin) && inventoryTetris.name == "InventoryTetrisSecond")) {
+                if (inventoryTetris.name != "InventoryTetrisSecond"){ //play audio
+                    audioManager.Play2DSFX(audioManager.gainPoints);
+                }
                 toInventoryTetris = inventoryTetris;
                 break;
             }
@@ -119,6 +124,7 @@ public class InventoryTetrisDragDropSystem : MonoBehaviour {
                 // Item placed!
             } else {
                 // Cannot drop item here!
+                audioManager.Play2DSFX(audioManager.placeDecline);
                 TooltipCanvas.ShowTooltip_Static("Cannot Drop Item Here!");
                 FunctionTimer.Create(() => { TooltipCanvas.HideTooltip_Static(); }, 2f, "HideTooltip", true, true);
 
@@ -129,6 +135,7 @@ public class InventoryTetrisDragDropSystem : MonoBehaviour {
             // Not on top of any Inventory Tetris!
 
             // Cannot drop item here!
+            audioManager.Play2DSFX(audioManager.placeDecline);
             TooltipCanvas.ShowTooltip_Static("Cannot Drop Item Here!");
             FunctionTimer.Create(() => { TooltipCanvas.HideTooltip_Static(); }, 2f, "HideTooltip", true, true);
 

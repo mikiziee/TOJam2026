@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class GrabbyHand : MonoBehaviour
 {
     public InputSystem_Actions controls;
+    AudioManager audioManager;
 
     private InputAction interact, interactAction;
 
@@ -34,6 +35,7 @@ public class GrabbyHand : MonoBehaviour
     private void Awake()
     {
         controls = new InputSystem_Actions();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     private void OnEnable()
@@ -52,6 +54,7 @@ public class GrabbyHand : MonoBehaviour
     {
         if (context.performed)
         {
+            audioManager.Play2DSFX(audioManager.grab);
             neutral.SetActive(false);
             grab.SetActive(true);
 
