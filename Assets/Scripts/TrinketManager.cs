@@ -54,12 +54,12 @@ public class TrinketManager : MonoBehaviour
 
         if (left.IsPressed() && transform.localPosition.x >= -2)
         {
-            transform.localPosition = transform.localPosition - new Vector3(0.1f, 0, 0);
+            transform.localPosition = transform.localPosition - new Vector3(0.05f, 0, 0);
         }
 
         if (right.IsPressed() && transform.localPosition.x <= 2)
         {
-            transform.localPosition = transform.localPosition + new Vector3(0.1f, 0, 0);
+            transform.localPosition = transform.localPosition + new Vector3(0.05f, 0, 0);
         }
 
         if (trinket != null && trinket.GetComponent<Rigidbody2D>().IsSleeping())

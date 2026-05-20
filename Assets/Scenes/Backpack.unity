@@ -505,11 +505,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6443898622696068590, guid: 3d18c67cf2ccf424da4b7ad25bb99d1e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 261.36823
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6443898622696068590, guid: 3d18c67cf2ccf424da4b7ad25bb99d1e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 93.72787
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6443898622696068590, guid: 3d18c67cf2ccf424da4b7ad25bb99d1e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -544,7 +544,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6647115095397209280, guid: 3d18c67cf2ccf424da4b7ad25bb99d1e, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d18c67cf2ccf424da4b7ad25bb99d1e, type: 3}
@@ -681,9 +682,9 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.015951604
+    x: 0.00006365776
     y: 0
-    width: 0.9680968
+    width: 0.9998727
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
