@@ -57,11 +57,11 @@ public class InventoryTetrisTesting : MonoBehaviour {
     }
 
     public void SaveCarInventory() {
-        Globals.carTetrisSaveList[0] = inventoryTetrisTrunk.Save();
+        /*Globals.carTetrisSaveList[0] = inventoryTetrisTrunk.Save();
         Debug.Log("Saved Car Trunk Inventory: " + Globals.carTetrisSaveList[0]);
         Globals.carTetrisSaveList[1] = inventoryTetrisFrontMid.Save();
         Debug.Log("Saved Car Front Mid Inventory: " + Globals.carTetrisSaveList[1]);  
-        Globals.carTetrisSaveList[2] = inventoryTetrisFrontRight.Save();
+        Globals.carTetrisSaveList[2] = inventoryTetrisFrontRight.Save();*/
     }
 
     public float TotalPoints(){//(string[] penaltyItemNames, int pointsToDeduct) {
